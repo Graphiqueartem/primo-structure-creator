@@ -88,20 +88,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-14">
-      {/* Green Title Section */}
-      <section className="py-6 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-2xl font-bold">Contact</h1>
-        </div>
-      </section>
-      
-      <StandardPageLayout
-        featuredBlocks={featuredBlocks}
-        contentSections={contentSections}
-        heroSection={heroSection}
-      />
-    </div>
+    <StandardPageLayout
+      featuredBlocks={featuredBlocks}
+      contentSections={contentSections}
+      heroSection={heroSection}
+    />
   );
 };
 

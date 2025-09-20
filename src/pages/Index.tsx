@@ -1,118 +1,130 @@
 import HeroSection from "@/components/home/HeroSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
-import CallToActionSection from "@/components/home/CallToActionSection";
-import { ImagePlaceholder } from "@/components/ui/placeholders";
+import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Full-screen Hero Section */}
+    <>
       <HeroSection />
       
-      {/* Expanded Intro Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl font-bold text-forest-deep leading-tight">
-                Stories That Change the World
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                "Every tradition is a story. Every story is a bridge to the future."
+      {/* Features Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-forest-deep mb-4">Our Creative Focus</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Bringing together folklore, wildlife, and storytelling through innovative media production
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            <Card className="text-center">
+              <CardHeader>
+                <CardTitle className="text-lg">Cultural Heritage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Authentic folklore from around the world</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <CardTitle className="text-lg">Wildlife Stories</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Conservation through storytelling</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <CardTitle className="text-lg">Creative Production</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Puppetry, AI, and live action</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardHeader>
+                <CardTitle className="text-lg">Global Impact</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Educational content for children</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Media Showcase */}
+      <section className="py-16 bg-forest-light/20">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Creative Vision</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                We create magical content that brings folklore and wildlife together, 
+                inspiring children to connect with nature and cultural heritage.
               </p>
+              <div className="grid grid-cols-2 gap-4">
+                <ImagePlaceholder />
+                <VideoPlaceholder />
+              </div>
             </div>
-            
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
-              <p>
-                At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.
-              </p>
-              <p>
-                We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.
-              </p>
+            <div className="space-y-4">
+              <ImagePlaceholder />
+              <div className="grid grid-cols-2 gap-4">
+                <VideoPlaceholder />
+                <ImagePlaceholder />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Introduction Block */}
-      <section className="py-24 bg-forest-light/5">
-        <div className="container mx-auto px-6 lg:px-8">
+      {/* Mission Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep leading-tight">
-                At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool
-              </h2>
-              <div className="space-y-6 text-muted-foreground">
-                <p>
-                  Stories have taught us who we are, connected us across cultures, and inspired generations to dream. Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.
-                </p>
-                <p>
-                  That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.
-                </p>
-                <div className="bg-gradient-magical p-8 rounded-2xl text-center">
-                  <p className="text-lg font-semibold text-forest-deep italic">
-                    "We tell magical stories that protect nature and inspire generations."
-                  </p>
-                </div>
+            <div className="space-y-4">
+              <VideoPlaceholder />
+              <div className="grid grid-cols-2 gap-4">
+                <ImagePlaceholder />
+                <VideoPlaceholder />
               </div>
             </div>
             <div>
-              <ImagePlaceholder />
+              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Mission</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Through the power of storytelling, we aim to preserve cultural heritage 
+                while fostering a deep connection between children and the natural world.
+              </p>
+              <Button variant="default" size="lg" asChild>
+                <Link to="/about">Learn More</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <FeaturesSection />
-
-      {/* Production Highlights */}
-      <section className="py-24 bg-gradient-forest">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-forest-deep mb-6">
-              Our Production Approach
-            </h2>
-            <p className="text-xl text-forest-deep/70 max-w-3xl mx-auto">
-              Blending film, theatre, puppetry, and AI innovation to create magical stories
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Wildlife Cinematography",
-                description: "Capturing the raw wonder of the natural world"
-              },
-              {
-                title: "Puppetry & Practical Artistry", 
-                description: "Timeless, tactile, beloved by children"
-              },
-              {
-                title: "Live Action & Human Performance",
-                description: "Authentic, emotional, deeply relatable"
-              },
-              {
-                title: "AI-enhanced Visuals & Innovation",
-                description: "Expanding creative possibilities"
-              }
-            ].map((item, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto flex items-center justify-center">
-                  <div className="w-8 h-8 bg-primary rounded-full"></div>
-                </div>
-                <h3 className="text-lg font-semibold text-forest-deep">{item.title}</h3>
-                <p className="text-forest-deep/70 text-sm">{item.description}</p>
-              </div>
-            ))}
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-warm text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-forest-deep mb-4">Join Our Story</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="default" size="lg" asChild>
+              <Link to="/partnerships">Partner With Us</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/get-involved">Get Involved</Link>
+            </Button>
           </div>
         </div>
       </section>
-
-      {/* Call to Action Section */}
-      <CallToActionSection />
-    </div>
+    </>
   );
 };
 
-export default Home;
+export default Index;
