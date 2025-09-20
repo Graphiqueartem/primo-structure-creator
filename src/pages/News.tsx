@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
@@ -115,17 +115,24 @@ const News = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              News & Insights
+            <div className="mb-4">
+              <Badge variant="secondary" className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-white/20 text-white border-white/30">
+                News & Insights
+              </Badge>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Stories That Shape Tomorrow
             </h1>
+            <h2 className="text-xl md:text-2xl text-white/90 mb-4">
+              Updates, Insights & Behind the Scenes
+            </h2>
             <div className="text-lg text-white/80 mb-8">
               <p className="font-semibold">
                 Stay updated on our latest productions, partnerships, and impact stories. 
                 Discover thought leadership on culture, conservation, and the power of storytelling.
               </p>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="warm" size="lg" asChild>
                 <Link to="#featured">Read Latest Stories</Link>
               </Button>
