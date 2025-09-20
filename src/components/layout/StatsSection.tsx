@@ -22,7 +22,7 @@ export const StatsSection = ({
   backgroundClass = "bg-forest-light/10" 
 }: StatsSectionProps) => {
   return (
-    <section className={`py-12 md:py-16 lg:py-20 ${backgroundClass}`}>
+    <section className={`py-8 md:py-12 lg:py-16 ${backgroundClass}`}>
       <div className="container mx-auto px-6 md:px-4">
         {(title || subtitle) && (
           <div className="text-center mb-10 md:mb-12">

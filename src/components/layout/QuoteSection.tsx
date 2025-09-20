@@ -16,7 +16,7 @@ export const QuoteSection = ({
   decorativeElements 
 }: QuoteSectionProps) => {
   return (
-    <section className={`py-12 md:py-16 lg:py-20 relative overflow-hidden ${backgroundClass}`}>
+    <section className={`py-8 md:py-12 lg:py-16 relative overflow-hidden ${backgroundClass}`}>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 right-10 text-6xl md:text-9xl font-serif text-current">"</div>
