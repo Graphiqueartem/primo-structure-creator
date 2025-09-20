@@ -38,22 +38,22 @@ export const PageHeader = ({
             </Badge>
           )}
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 tracking-tight leading-tight px-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight px-2">
             {title}
           </h1>
           
           {subtitle && (
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-current/90 mb-4 md:mb-6 font-medium px-2">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-current/90 mb-3 md:mb-4 font-medium px-2">
               {subtitle}
             </h2>
           )}
           
-          <div className="text-sm sm:text-base md:text-lg lg:text-xl text-current/80 mb-8 md:mb-10 lg:mb-12 leading-relaxed max-w-3xl mx-auto px-2">
+          <div className="text-sm sm:text-base md:text-lg lg:text-xl text-current/80 mb-4 md:mb-5 leading-relaxed max-w-3xl mx-auto px-2">
             {description}
           </div>
           
           {actions && (
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-8 md:mb-10 px-2">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-4 md:mb-5 px-2">
               {actions}
             </div>
           )}

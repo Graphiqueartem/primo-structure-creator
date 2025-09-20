@@ -25,7 +25,7 @@ export const QuoteSection = ({
       
       <div className="container mx-auto px-6 md:px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-current mb-6 md:mb-8 leading-relaxed px-2">
+          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-current mb-4 md:mb-5 leading-relaxed px-2">
             "{quote}"
           </blockquote>
           
@@ -41,7 +41,7 @@ export const QuoteSection = ({
           )}
           
           {decorativeElements && (
-            <div className="mt-6 md:mt-8 px-2">
+            <div className="mt-4 md:mt-5 px-2">
               {decorativeElements}
             </div>
           )}

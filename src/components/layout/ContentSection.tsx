@@ -25,7 +25,7 @@ export const ContentSection = ({
           mediaPosition === "left" ? "lg:grid-flow-col-dense" : ""
         }`}>
           <div className={mediaPosition === "left" ? "lg:col-start-2" : ""}>
-            <h2 className="text-3xl font-bold text-forest-deep mb-6">
+            <h2 className="text-3xl font-bold text-forest-deep mb-4">
               {title}
             </h2>
             <div className="text-muted-foreground space-y-4">

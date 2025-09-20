@@ -25,9 +25,9 @@ export const StatsSection = ({
     <section className={`py-4 md:py-6 lg:py-8 ${backgroundClass}`}>
       <div className="container mx-auto px-6 md:px-4">
         {(title || subtitle) && (
-          <div className="text-center mb-10 md:mb-12">
+          <div className="text-center mb-4 md:mb-5">
             {title && (
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-3 md:mb-4 px-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-2 md:mb-3 px-2">
                 {title}
               </h2>
             )}
@@ -43,13 +43,13 @@ export const StatsSection = ({
           {stats.map((stat, index) => (
             <Card key={index} className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105 bg-background/50 backdrop-blur-sm border-forest-light/30">
               <CardContent className="p-3 sm:p-4 md:p-6">
-                <div className="text-primary mb-2 md:mb-3 lg:mb-4 flex justify-center">
+                <div className="text-primary mb-2 md:mb-3 flex justify-center">
                   {stat.icon}
                 </div>
-                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-deep mb-1 md:mb-2">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-deep mb-1">
                   {stat.number}
                 </div>
-                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-forest-deep mb-1 md:mb-2">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-forest-deep mb-1">
                   {stat.label}
                 </div>
                 {stat.description && (

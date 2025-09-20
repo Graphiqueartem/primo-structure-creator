@@ -34,9 +34,9 @@ export const ContentBlock = ({
       <div className={`py-4 md:py-6 lg:py-8 ${className}`}>
         <div className="container mx-auto px-6 md:px-4">
           {title && (
-            <div className="text-center mb-10 md:mb-12">
-              {icon && <div className="mb-4 flex justify-center">{icon}</div>}
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-4 md:mb-6 px-2">
+            <div className="text-center mb-4 md:mb-5">
+              {icon && <div className="mb-3 flex justify-center">{icon}</div>}
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-3 md:mb-4 px-2">
                 {title}
               </h2>
             </div>
@@ -54,14 +54,14 @@ export const ContentBlock = ({
       <div className="container mx-auto px-6 md:px-4">
         <Card className={getVariantClasses()}>
           {title && (
-            <CardHeader className="text-center pb-6 md:pb-8 px-4 md:px-6">
-              {icon && <div className="mb-4 flex justify-center">{icon}</div>}
-              <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 px-2">
+            <CardHeader className="text-center pb-4 md:pb-5 px-4 md:px-6">
+              {icon && <div className="mb-3 flex justify-center">{icon}</div>}
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 px-2">
                 {title}
               </CardTitle>
             </CardHeader>
           )}
-          <CardContent className="p-6 md:p-8 lg:p-10">
+          <CardContent className="p-4 md:p-5 lg:p-6">
             {children}
           </CardContent>
         </Card>
