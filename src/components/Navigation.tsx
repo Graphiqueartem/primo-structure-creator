@@ -98,19 +98,19 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex flex-1 items-center justify-center space-x-6">
+          <div className="hidden lg:flex flex-1 items-center justify-center space-x-4 xl:space-x-5">
             {centeredLinks.map((item) => {
               if (item.dropdownItems) {
                 return (
                   <DropdownMenu key={item.title}>
                     <DropdownMenuTrigger className={cn(
-                      "flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md hover:bg-accent",
+                      "flex items-center gap-1 text-xs xl:text-sm font-medium transition-colors hover:text-primary px-2 xl:px-3 py-2 rounded-md hover:bg-accent whitespace-nowrap",
                       location.pathname === item.href
                         ? "text-primary bg-accent/50"
                         : "text-muted-foreground",
                     )}>
                       {item.title}
-                      <ChevronDown className="h-3 w-3" />
+                      <ChevronDown className="h-3 w-3 flex-shrink-0" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56 bg-popover border-border shadow-lg z-50">
                       <DropdownMenuItem asChild>
@@ -141,7 +141,7 @@ const Navigation = () => {
                   key={item.title}
                   to={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md hover:bg-accent",
+                    "text-xs xl:text-sm font-medium transition-colors hover:text-primary px-2 xl:px-3 py-2 rounded-md hover:bg-accent whitespace-nowrap",
                     location.pathname === item.href
                       ? "text-primary bg-accent/50"
                       : "text-muted-foreground",
@@ -155,7 +155,7 @@ const Navigation = () => {
 
           {/* Desktop CTA - Right */}
           <div className="hidden lg:flex items-center">
-            <Button variant="magical" size="sm" asChild>
+            <Button variant="magical" size="sm" className="text-xs xl:text-sm px-3 xl:px-4" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

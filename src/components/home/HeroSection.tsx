@@ -17,7 +17,7 @@ const HeroSection = () => {
             storytelling to life — to inspire children, empower communities, and protect our natural world.
           </p>
           
-          <div className="flex flex-col gap-6 sm:flex-row sm:gap-8 justify-center items-center pt-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center items-center pt-6">
             <Button variant="hero" size="xl" asChild>
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="text-ivory/80 text-sm uppercase tracking-wider pt-12">
+          <div className="text-ivory/80 text-sm uppercase tracking-wider pt-8">
             Stories connect us. Culture inspires us. Together we protect our planet.
           </div>
         </div>
