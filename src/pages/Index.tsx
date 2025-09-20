@@ -1,130 +1,117 @@
-import HeroSection from "@/components/home/HeroSection";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { StandardPageLayout } from "@/components/layout/StandardPageLayout";
+import { 
+  Film, 
+  Globe, 
+  Heart
+} from "lucide-react";
 
-const Index = () => {
-  return (
-    <>
-      <HeroSection />
-      
-      {/* Features Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-forest-deep mb-4">Our Creative Focus</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Bringing together folklore, wildlife, and storytelling through innovative media production
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Cultural Heritage</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Authentic folklore from around the world</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Wildlife Stories</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Conservation through storytelling</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Creative Production</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Puppetry, AI, and live action</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Global Impact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Educational content for children</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+const Home = () => {
+  const featuredBlocks = [
+    {
+      icon: <Film className="h-8 w-8" />,
+      title: "Wildlife Cinematography",
+      description: "Capturing the raw wonder of the natural world and weaving it into magical storytelling."
+    },
+    {
+      icon: <Globe className="h-8 w-8" />,
+      title: "Cultural Heritage",
+      description: "Folklore and fairy tales from around the world, retold with respect and authenticity."
+    },
+    {
+      icon: <Heart className="h-8 w-8" />,
+      title: "Conservation Impact",
+      description: "Every story supports the protection of wildlife and ecosystems while inspiring action."
+    }
+  ];
 
-      {/* Media Showcase */}
-      <section className="py-16 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Creative Vision</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We create magical content that brings folklore and wildlife together, 
-                inspiring children to connect with nature and cultural heritage.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <ImagePlaceholder />
-                <VideoPlaceholder />
-              </div>
-            </div>
-            <div className="space-y-4">
-              <ImagePlaceholder />
-              <div className="grid grid-cols-2 gap-4">
-                <VideoPlaceholder />
-                <ImagePlaceholder />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4">
-              <VideoPlaceholder />
-              <div className="grid grid-cols-2 gap-4">
-                <ImagePlaceholder />
-                <VideoPlaceholder />
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Through the power of storytelling, we aim to preserve cultural heritage 
-                while fostering a deep connection between children and the natural world.
-              </p>
-              <Button variant="default" size="lg" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-warm text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-forest-deep mb-4">Join Our Story</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
+  const contentSections = [
+    {
+      title: "Stories That Change the World",
+      content: (
+        <div className="space-y-4">
+          <p>
+            At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/get-involved">Get Involved</Link>
-            </Button>
-          </div>
+          <p>
+            Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world. That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.
+          </p>
+          <p className="font-medium text-forest-deep">
+            We tell magical stories that protect nature and inspire generations.
+          </p>
+        </div>
+      ),
+      mediaType: "image" as const,
+      mediaPosition: "right" as const,
+      backgroundColor: "bg-background"
+    },
+    {
+      title: "Why Whimsy Films Matters",
+      content: (
+        <div className="space-y-4">
+          <p>
+            We are not simply a film studio. We are building a global cultural platform where every production:
+          </p>
+          <ul className="space-y-2 list-disc list-inside">
+            <li>Acts as a soft power tool for governments to showcase their cultural heritage</li>
+            <li>Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection</li>
+            <li>Supports education systems, offering engaging, curriculum-linked cultural resources</li>
+            <li>Creates new economic opportunities in creative industries, tourism, and cultural exchange</li>
+          </ul>
+          <p>
+            For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to align with a high-growth creative sector with strong audience demand and measurable social and environmental impact.
+          </p>
+        </div>
+      ),
+      mediaType: "video" as const,
+      mediaPosition: "left" as const,
+      backgroundColor: "bg-forest-light/10"
+    }
+  ];
+
+  const heroSection = {
+    title: "Where Storytelling Inspires Action",
+    subtitle: "Stories connect us. Culture inspires us. Together we protect our planet.",
+    content: (
+      <div className="space-y-4">
+        <p>
+          Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
+        </p>
+        <p className="text-lg font-medium italic">
+          "Every tradition is a story. Every story is a bridge to the future."
+        </p>
+      </div>
+    ),
+    actions: (
+      <>
+        <Button variant="default" size="lg" asChild>
+          <Link to="/partnerships">Partner With Us</Link>
+        </Button>
+        <Button variant="outline" size="lg" asChild>
+          <Link to="/vision">Discover Our Vision</Link>
+        </Button>
+      </>
+    ),
+    backgroundClass: "bg-gradient-hero text-white"
+  };
+
+  return (
+    <div className="min-h-screen bg-background pt-14">
+      {/* Green Title Section */}
+      <section className="py-6 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-2xl font-bold">Home</h1>
         </div>
       </section>
-    </>
+      
+      <StandardPageLayout
+        featuredBlocks={featuredBlocks}
+        contentSections={contentSections}
+        heroSection={heroSection}
+      />
+    </div>
   );
 };
 
-export default Index;
+export default Home;

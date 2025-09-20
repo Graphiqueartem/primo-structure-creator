@@ -16,32 +16,32 @@ const Vision = () => {
     },
     {
       icon: <Heart className="h-8 w-8" />,
-      title: "Respect",
+      title: "Respect", 
       description: "Cultural and ecological authenticity in everything we create."
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "Global Impact",
-      description: "Every project contributes to cultural, social, and environmental good."
+      title: "Collaboration",
+      description: "Co-created with governments, NGOs, educators, and communities."
     }
   ];
 
   const contentSections = [
     {
-      title: "Why Storytelling Matters",
+      title: "Mission & Values",
       content: (
         <div className="space-y-4">
           <p>
-            Stories are more than entertainment. They pass down cultural wisdom, shape 
-            childhood imagination, build empathy, and inspire societal change. Whimsy Films 
-            uses this power intentionally, turning folklore and wildlife storytelling into 
-            platforms for education, diplomacy, and conservation.
+            At Whimsy Films, our mission is to create films that celebrate folklore, protect wildlife, and inspire children everywhere to imagine a more inclusive, compassionate, and sustainable world.
           </p>
-          <p>
-            Folklore transcends borders, languages, and cultures. A story about a 
-            brave child protecting forest animals resonates universally, whether 
-            told in Nigeria, Japan, or Peru.
-          </p>
+          <p>Our values guide every decision:</p>
+          <ul className="space-y-2">
+            <li><strong>Imagination:</strong> wonder is the seed of empathy and action.</li>
+            <li><strong>Respect:</strong> cultural and ecological authenticity.</li>
+            <li><strong>Innovation:</strong> technology without losing artistry.</li>
+            <li><strong>Collaboration:</strong> co-created with governments, NGOs, educators, and communities.</li>
+            <li><strong>Impact:</strong> every project contributes to cultural, social, and environmental good.</li>
+          </ul>
         </div>
       ),
       mediaType: "image" as const,
@@ -49,17 +49,11 @@ const Vision = () => {
       backgroundColor: "bg-background"
     },
     {
-      title: "The Future We Are Building",
+      title: "Why Storytelling Matters",
       content: (
         <div className="space-y-4">
           <p>
-            We envision a future where children everywhere grow up with stories representing their 
-            cultures, where families discover films that are entertaining yet enriching, and where 
-            governments and NGOs use our productions as cultural diplomacy tools.
-          </p>
-          <p>
-            When children see themselves as heroes protecting wildlife, they develop 
-            deep emotional connections to conservation that last a lifetime.
+            Stories are more than entertainment. They pass down cultural wisdom, shape childhood imagination, build empathy, and inspire societal change. Whimsy Films uses this power intentionally, turning folklore and wildlife storytelling into platforms for education, diplomacy, and conservation.
           </p>
         </div>
       ),
@@ -70,21 +64,25 @@ const Vision = () => {
   ];
 
   const heroSection = {
-    title: "Turn Vision Into Reality",
-    subtitle: "Reimagining Stories, Inspiring Change",
+    title: "The Future We Are Building",
+    subtitle: "Turn Vision Into Reality",
     content: (
-      <p>
-        Every great story begins with someone believing it's possible. Join us in creating 
-        the stories that will shape tomorrow, where entertainment meets education and conservation.
-      </p>
+      <div className="space-y-4">
+        <p>
+          We envision a future where children everywhere grow up with stories representing their cultures, where families discover films that are entertaining yet enriching, and where governments and NGOs use our productions as cultural diplomacy tools and awareness campaigns. Conservation efforts are amplified by stories that make the natural world unforgettable.
+        </p>
+        <p>
+          Every great story begins with someone believing it's possible. Join us in creating the stories that will shape tomorrow.
+        </p>
+      </div>
     ),
     actions: (
       <>
         <Button variant="default" size="lg" asChild>
-          <Link to="/partnerships">Partner With Us</Link>
+          <Link to="/partnerships">Be Part of This Future</Link>
         </Button>
         <Button variant="outline" size="lg" asChild>
-          <Link to="/get-involved">Join the Movement</Link>
+          <Link to="/get-involved">Join Our Mission</Link>
         </Button>
       </>
     ),
@@ -92,11 +90,20 @@ const Vision = () => {
   };
 
   return (
-    <StandardPageLayout
-      featuredBlocks={featuredBlocks}
-      contentSections={contentSections}
-      heroSection={heroSection}
-    />
+    <div className="min-h-screen bg-background pt-14">
+      {/* Green Title Section */}
+      <section className="py-6 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-2xl font-bold">Our Vision</h1>
+        </div>
+      </section>
+      
+      <StandardPageLayout
+        featuredBlocks={featuredBlocks}
+        contentSections={contentSections}
+        heroSection={heroSection}
+      />
+    </div>
   );
 };
 
