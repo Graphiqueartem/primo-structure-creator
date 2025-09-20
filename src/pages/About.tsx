@@ -95,28 +95,28 @@ const About = () => {
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               Whimsy Films is a UK-based production house dedicated to creating magical, child-centered films and series that combine folklore, wildlife, and imaginative storytelling. But we are more than a studio — we are a movement for cultural celebration and conservation.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               We work at the intersection of:
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <Film className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Creative Cinema</strong> – original productions blending live action, puppetry, wildlife, and AI-enhanced visuals.</span>
+                <span className="text-body text-muted-foreground"><strong>Creative Cinema</strong> – original productions blending live action, puppetry, wildlife, and AI-enhanced visuals.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Cultural Heritage</strong> – folklore and fairy tales from around the world, retold with respect and authenticity.</span>
+                <span className="text-body text-muted-foreground"><strong>Cultural Heritage</strong> – folklore and fairy tales from around the world, retold with respect and authenticity.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Leaf className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Conservation Storytelling</strong> – every story supports the protection of wildlife and ecosystems.</span>
+                <span className="text-body text-muted-foreground"><strong>Conservation Storytelling</strong> – every story supports the protection of wildlife and ecosystems.</span>
               </div>
               <div className="flex items-start gap-3">
                 <BookOpen className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Child-Focused Education</strong> – stories designed to spark empathy, curiosity, and learning.</span>
+                <span className="text-body text-muted-foreground"><strong>Child-Focused Education</strong> – stories designed to spark empathy, curiosity, and learning.</span>
               </div>
             </div>
             <Button variant="default" size="lg" asChild>
@@ -205,18 +205,18 @@ const About = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
+            <p className="text-body-lg text-forest-deep/80 leading-relaxed">
               Whimsy Films began with a simple belief: that the old stories we tell our children hold the power to shape the world of tomorrow. Across every culture, fairy tales and folklore carry wisdom, values, and a connection to the natural world. Yet, many of these stories remain untold on the global stage.
             </p>
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
+            <p className="text-body-lg text-forest-deep/80 leading-relaxed">
               At the same time, our planet's wildlife faces unprecedented threats. Children are growing up further removed from nature, at risk of losing their connection to the very creatures and landscapes that inspired those stories in the first place.
             </p>
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
+            <p className="text-body-lg text-forest-deep/80 leading-relaxed">
               Whimsy Films was founded to bridge that gap. To reawaken the magic of folklore and reconnect children with wildlife, through films that are enchanting, educational, and globally inclusive.
             </p>
             <div className="bg-white/20 p-6 rounded-lg">
               <h4 className="font-semibold text-forest-deep mb-3">Why Folklore & Sustainability:</h4>
-              <p className="text-forest-deep/80">
+              <p className="text-body text-forest-deep/80">
                 Folklore is more than entertainment. It is the ancestral memory of humankind, carrying lessons on how to coexist with the environment, how to navigate social harmony, and how to find meaning in times of uncertainty. At Whimsy Films, we treat folklore as a vital resource for sustainability education. By connecting stories with pressing issues like climate change, biodiversity, and cultural preservation, we reframe folklore as a tool for empowerment. Through our work, heritage is not frozen in time but activated as a force for present and future change.
               </p>
             </div>

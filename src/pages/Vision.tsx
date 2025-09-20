@@ -154,7 +154,7 @@ const Vision = () => {
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               Stories are more than entertainment. They pass down cultural wisdom, shape childhood imagination, build empathy, and inspire societal change. Whimsy Films uses this power intentionally, turning folklore and wildlife storytelling into platforms for education, diplomacy, and conservation.
             </p>
             <Button variant="default" size="lg" asChild>
@@ -193,7 +193,7 @@ const Vision = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
+            <p className="text-body-lg text-forest-deep/80 leading-relaxed">
               We envision a future where children everywhere grow up with stories representing their cultures, where families discover films that are entertaining yet enriching, and where governments and NGOs use our productions as cultural diplomacy tools and awareness campaigns. Conservation efforts are amplified by stories that make the natural world unforgettable.
             </p>
             <Button variant="outline" size="lg" asChild>

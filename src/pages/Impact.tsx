@@ -97,25 +97,25 @@ const Impact = () => {
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               We use film to protect what is disappearing. By weaving real wildlife into our folklore-inspired stories, children and families develop deep emotional connections with species and habitats.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Leaf className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Emotional Connection:</strong> Children care about what they know. By featuring real animals and ecosystems, we foster empathy and long-term conservation values.</span>
+                <span className="text-body text-muted-foreground"><strong>Emotional Connection:</strong> Children care about what they know. By featuring real animals and ecosystems, we foster empathy and long-term conservation values.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Global Awareness:</strong> Our films shine a light on endangered species and fragile habitats that rarely reach mainstream media.</span>
+                <span className="text-body text-muted-foreground"><strong>Global Awareness:</strong> Our films shine a light on endangered species and fragile habitats that rarely reach mainstream media.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Amplification for NGOs & Governments:</strong> By embedding conservation messages within stories, our films extend the reach of campaigns and policy initiatives.</span>
+                <span className="text-body text-muted-foreground"><strong>Amplification for NGOs & Governments:</strong> By embedding conservation messages within stories, our films extend the reach of campaigns and policy initiatives.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Soft Power Tool:</strong> Wildlife narratives become a unifying diplomatic message — transcending language and borders.</span>
+                <span className="text-body text-muted-foreground"><strong>Soft Power Tool:</strong> Wildlife narratives become a unifying diplomatic message — transcending language and borders.</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -151,7 +151,7 @@ const Impact = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
+            <p className="text-body-lg text-forest-deep/80 leading-relaxed">
               Folklore is humanity's oldest cultural currency. Yet many traditions are at risk of being forgotten.
             </p>
             <div className="space-y-4">
@@ -192,25 +192,25 @@ const Impact = () => {
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               Our films are crafted to do more than entertain — they support child development and inspire global citizenship.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <BookOpen className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Curriculum Alignment:</strong> Partnered with educators to design content that supports literacy, empathy, and ecological learning.</span>
+                <span className="text-body text-muted-foreground"><strong>Curriculum Alignment:</strong> Partnered with educators to design content that supports literacy, empathy, and ecological learning.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Child-Centered Design:</strong> Stories empower children as heroes, encouraging self-expression and resilience.</span>
+                <span className="text-body text-muted-foreground"><strong>Child-Centered Design:</strong> Stories empower children as heroes, encouraging self-expression and resilience.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Community Engagement:</strong> Schools, libraries, and NGOs can use our films in workshops, festivals, and learning programs.</span>
+                <span className="text-body text-muted-foreground"><strong>Community Engagement:</strong> Schools, libraries, and NGOs can use our films in workshops, festivals, and learning programs.</span>
               </div>
               <div className="flex items-start gap-3">
                 <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground"><strong>Inclusive Narratives:</strong> Representation of diverse voices ensures children see themselves reflected in the stories they love.</span>
+                <span className="text-body text-muted-foreground"><strong>Inclusive Narratives:</strong> Representation of diverse voices ensures children see themselves reflected in the stories they love.</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -247,25 +247,25 @@ const Impact = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               Whimsy Films generates value beyond the screen.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <Card className="p-4">
                 <h4 className="font-semibold text-forest-deep mb-2">💼 Economic Growth</h4>
-                <p className="text-sm text-muted-foreground">Film production supports local jobs, skills, and industries.</p>
+                <p className="text-body text-muted-foreground">Film production supports local jobs, skills, and industries.</p>
               </Card>
               <Card className="p-4">
                 <h4 className="font-semibold text-forest-deep mb-2">🎥 Tourism & Promotion</h4>
-                <p className="text-sm text-muted-foreground">Stories rooted in real cultures and landscapes attract tourism interest.</p>
+                <p className="text-body text-muted-foreground">Stories rooted in real cultures and landscapes attract tourism interest.</p>
               </Card>
               <Card className="p-4">
                 <h4 className="font-semibold text-forest-deep mb-2">💡 Innovation Showcase</h4>
-                <p className="text-sm text-muted-foreground">As pioneers in blending puppetry, AI, and live wildlife, we position partners at the forefront of global creative innovation.</p>
+                <p className="text-body text-muted-foreground">As pioneers in blending puppetry, AI, and live wildlife, we position partners at the forefront of global creative innovation.</p>
               </Card>
               <Card className="p-4">
                 <h4 className="font-semibold text-forest-deep mb-2">🌍 Global Visibility</h4>
-                <p className="text-sm text-muted-foreground">Governments and institutions gain prestige by being associated with a studio redefining the cultural landscape.</p>
+                <p className="text-body text-muted-foreground">Governments and institutions gain prestige by being associated with a studio redefining the cultural landscape.</p>
               </Card>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">

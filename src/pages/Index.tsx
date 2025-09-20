@@ -80,10 +80,10 @@ const Index = () => {
       >
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -120,16 +120,16 @@ const Index = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-body-lg text-muted-foreground leading-relaxed">
               That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.
             </p>
-            <p className="text-lg font-semibold text-primary">
+            <p className="text-body-lg font-semibold text-primary">
               We tell magical stories that protect nature and inspire generations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

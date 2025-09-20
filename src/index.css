@@ -124,4 +124,29 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Consistent Typography System */
+  .text-body {
+    @apply text-sm sm:text-base leading-relaxed;
+  }
+  
+  .text-body-lg {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+  
+  .text-subtitle {
+    @apply text-lg sm:text-xl leading-relaxed;
+  }
+  
+  .text-heading-sm {
+    @apply text-xl sm:text-2xl font-semibold;
+  }
+  
+  .text-heading {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+  }
+  
+  .text-heading-lg {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
 }
