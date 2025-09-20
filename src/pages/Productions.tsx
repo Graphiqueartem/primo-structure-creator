@@ -238,6 +238,7 @@ const Productions = () => {
         title="Our Five-Pillar Approach"
         variant="outlined"
         className="bg-forest-light/20"
+        id="our-approach"
       >
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 text-center">
           Every production follows our proven methodology that ensures cultural authenticity, 
@@ -316,6 +317,7 @@ const Productions = () => {
         title="Current Development Slate"
         variant="minimal"
         className="bg-forest-deep text-white"
+        id="development-slate"
       >
         <p className="text-xl text-current/90 max-w-3xl mx-auto mb-8 text-center">
           While specific titles remain confidential, our slate is built around core thematic 

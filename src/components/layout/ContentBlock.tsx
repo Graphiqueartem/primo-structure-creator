@@ -7,6 +7,7 @@ interface ContentBlockProps {
   variant?: "default" | "outlined" | "gradient" | "minimal";
   className?: string;
   icon?: ReactNode;
+  id?: string;
 }
 
 export const ContentBlock = ({ 
@@ -14,7 +15,8 @@ export const ContentBlock = ({
   children, 
   variant = "default",
   className = "",
-  icon
+  icon,
+  id
 }: ContentBlockProps) => {
   const getVariantClasses = () => {
     switch (variant) {
@@ -31,7 +33,7 @@ export const ContentBlock = ({
 
   if (variant === "minimal") {
     return (
-      <div className={`py-1 md:py-4 lg:py-5 ${className}`}>
+      <div className={`py-1 md:py-4 lg:py-5 ${className}`} id={id}>
         <div className="container mx-auto px-4 md:px-4">
           {title && (
             <div className="text-center mb-2 md:mb-5">
@@ -50,7 +52,7 @@ export const ContentBlock = ({
   }
 
   return (
-    <section className={`py-1 md:py-4 lg:py-5 ${className}`}>
+    <section className={`py-1 md:py-4 lg:py-5 ${className}`} id={id}>
       <div className="container mx-auto px-4 md:px-4">
         <Card className={getVariantClasses()}>
           {title && (

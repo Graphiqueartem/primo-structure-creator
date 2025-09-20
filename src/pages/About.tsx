@@ -92,6 +92,7 @@ const About = () => {
         variant="outlined"
         className="bg-forest-light/5"
         icon={<Sparkles className="h-12 w-12 text-primary" />}
+        id="who-we-are"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -195,6 +196,7 @@ const About = () => {
       <ContentBlock 
         title="Our Story"
         variant="gradient"
+        id="our-story"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
@@ -232,6 +234,7 @@ const About = () => {
         title="Our Team"
         variant="outlined"
         className="bg-background"
+        id="our-team"
       >
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <p className="text-lg text-muted-foreground leading-relaxed">

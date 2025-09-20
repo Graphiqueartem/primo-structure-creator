@@ -94,6 +94,7 @@ const Impact = () => {
         title="Conservation Impact"
         variant="outlined"
         className="bg-forest-light/5"
+        id="conservation-impact"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -141,6 +142,7 @@ const Impact = () => {
       <ContentBlock 
         title="Cultural Impact"
         variant="gradient"
+        id="cultural-impact"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
@@ -189,6 +191,7 @@ const Impact = () => {
         title="Education & Social Impact"
         variant="outlined"
         className="bg-background"
+        id="education-social-impact"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -237,6 +240,7 @@ const Impact = () => {
         title="Economic & Partnership Impact"
         variant="minimal"
         className="bg-forest-light/10"
+        id="economic-impact"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">

@@ -86,6 +86,18 @@ const Vision = () => {
         }
       />
 
+      {/* Mission & Values Section */}
+      <section id="mission-values" className="py-1 md:py-4 lg:py-5">
+        <div className="container mx-auto px-4 md:px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-forest-deep mb-4">Mission & Values</h2>
+            <p className="text-body-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              At Whimsy Films, our mission is to create films that celebrate folklore, protect wildlife, and inspire children everywhere to imagine a more inclusive, compassionate, and sustainable world.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Vision Stats */}
       <StatsSection 
         title="The Scale of Our Vision"
@@ -151,6 +163,7 @@ const Vision = () => {
         title="Why Storytelling Matters"
         variant="outlined"
         className="bg-background"
+        id="why-storytelling-matters"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -183,6 +196,7 @@ const Vision = () => {
       <ContentBlock 
         title="The Future We Are Building"
         variant="gradient"
+        id="future-we-are-building"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
