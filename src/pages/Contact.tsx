@@ -1,404 +1,98 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
+import { StandardPageLayout } from "@/components/layout/StandardPageLayout";
 import { 
   Mail, 
   Phone, 
-  MapPin, 
-  Clock,
-  Building,
-  Heart,
-  GraduationCap,
-  Camera,
-  Users,
-  MessageCircle,
-  Send,
-  Globe
+  MapPin
 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    type: "",
-    subject: "",
-    message: ""
-  });
-  
-  const { toast } = useToast();
+  const featuredBlocks = [
+    {
+      icon: <Mail className="h-8 w-8" />,
+      title: "Get in Touch",
+      description: "Reach out to discuss partnerships, collaborations, or learn more about our mission."
+    },
+    {
+      icon: <Phone className="h-8 w-8" />,
+      title: "Schedule a Call", 
+      description: "Book a consultation to explore how Whimsy Films can support your organization's goals."
+    },
+    {
+      icon: <MapPin className="h-8 w-8" />,
+      title: "Visit Our Studio",
+      description: "Based in the UK, we welcome visitors and collaborators from around the world."
+    }
+  ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      organization: "",
-      type: "",
-      subject: "",
-      message: ""
-    });
+  const contentSections = [
+    {
+      title: "Let's Create Something Magical Together",
+      content: (
+        <div className="space-y-4">
+          <p>
+            Whether you're a government agency, NGO, cultural organization, educational institution, 
+            or media company, we're always excited to explore new partnerships and collaborations.
+          </p>
+          <p>
+            Our team is ready to discuss how Whimsy Films can help bring your cultural stories to life, 
+            support your conservation efforts, or create educational content that inspires and empowers children.
+          </p>
+        </div>
+      ),
+      mediaType: "image" as const,
+      mediaPosition: "right" as const,
+      backgroundColor: "bg-background"
+    },
+    {
+      title: "Connect With Our Global Network",
+      content: (
+        <div className="space-y-4">
+          <p>
+            Whimsy Films works with partners across six continents. Our collaborative approach ensures 
+            that every project is culturally authentic, environmentally responsible, and educationally valuable.
+          </p>
+          <p>
+            From initial concept development to final distribution, we're committed to creating partnerships 
+            that are meaningful, sustainable, and impactful for all involved.
+          </p>
+        </div>
+      ),
+      mediaType: "video" as const,
+      mediaPosition: "left" as const,
+      backgroundColor: "bg-forest-light/10"
+    }
+  ];
+
+  const heroSection = {
+    title: "Start Your Journey With Us",
+    subtitle: "Ready to Bring Your Story to Life?",
+    content: (
+      <p>
+        Every great partnership begins with a conversation. Whether you have a specific project in mind 
+        or are simply curious about what we do, we'd love to hear from you and explore the possibilities together.
+      </p>
+    ),
+    actions: (
+      <>
+        <Button variant="default" size="lg" asChild>
+          <Link to="mailto:hello@whimsyfilms.com">Send Us an Email</Link>
+        </Button>
+        <Button variant="outline" size="lg" asChild>
+          <Link to="/partnerships">Explore Partnerships</Link>
+        </Button>
+      </>
+    ),
+    backgroundClass: "bg-gradient-warm text-forest-deep"
   };
 
-  const contactMethods = [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: "Email Us",
-      description: "Get in touch via email",
-      contact: "hello@whimsyfilms.com",
-      action: "Send Email"
-    },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Schedule a Call",
-      description: "Book a discovery conversation",
-      contact: "Available by appointment",
-      action: "Book Meeting"
-    },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Our Location", 
-      description: "Based in the United Kingdom",
-      contact: "London, UK",
-      action: "View Map"
-    }
-  ];
-
-  const partnershipTypes = [
-    {
-      icon: <Building className="h-8 w-8" />,
-      title: "Government & Cultural Ministries",
-      description: "Cultural diplomacy and heritage showcasing"
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      title: "NGOs & Charities",
-      description: "Social impact and conservation partnerships"  
-    },
-    {
-      icon: <GraduationCap className="h-8 w-8" />,
-      title: "Education & Academia",
-      description: "Curriculum development and research collaboration"
-    },
-    {
-      icon: <Camera className="h-8 w-8" />,
-      title: "Media & Creative Industries", 
-      description: "Co-production and distribution partnerships"
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      title: "Individual Supporters",
-      description: "Community membership and volunteering"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background pt-14">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Create Magic Together
-          </h1>
-          <p className="text-xl text-ivory/90 max-w-3xl mx-auto mb-8">
-            Every great partnership begins with a conversation. Whether you represent 
-            a government, NGO, cultural organization, or are simply passionate about 
-            our mission — we'd love to hear from you.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button variant="warm" size="lg" asChild>
-              <a href="#contact-form">Send Us a Message</a>
-            </Button>
-            <Button variant="magical" size="lg" asChild>
-              <a href="#partnership-info">Explore Partnerships</a>
-            </Button>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <ImagePlaceholder />
-            <ImagePlaceholder />
-            <ImagePlaceholder />
-          </div>
-        </div>
-      </section>
-
-      {/* Media Showcase */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold text-forest-deep mb-8 text-center">
-              Connect With Our Mission
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Methods */}
-      <section className="py-16 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-forest-deep mb-6">
-              Get In Touch
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose the method that works best for you. We respond to all inquiries 
-              within 24 hours and are excited to learn about your vision.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-                <CardContent className="p-8">
-                  <div className="text-primary mb-4 flex justify-center">
-                    {method.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-forest-deep mb-3">
-                    {method.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {method.description}
-                  </p>
-                  <p className="font-medium text-forest-deep mb-4">
-                    {method.contact}
-                  </p>
-                  <Button variant="outline" size="sm">
-                    {method.action}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <Card className="bg-gradient-warm border-0 max-w-2xl mx-auto">
-            <CardContent className="p-8 text-center">
-              <Clock className="h-12 w-12 text-forest-deep mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold text-forest-deep mb-6">
-                Response Times & Availability
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div>
-                  <h4 className="font-semibold text-forest-deep mb-2">Email Response</h4>
-                  <p className="text-forest-deep/80">Within 24 hours on business days</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-forest-deep mb-2">Meeting Scheduling</h4>
-                  <p className="text-forest-deep/80">Available Monday-Friday, UK time</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-forest-deep mb-2">Urgent Inquiries</h4>
-                  <p className="text-forest-deep/80">Mark as urgent in subject line</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-forest-deep mb-2">Partnership Discussions</h4>
-                  <p className="text-forest-deep/80">Comprehensive response within 48 hours</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact-form" className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-forest-deep mb-6">
-                Send Us a Message
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Tell us about your organization, your goals, and how you'd like to collaborate.
-              </p>
-            </div>
-
-            <Card className="shadow-soft">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="name" className="text-forest-deep font-medium">
-                        Full Name *
-                      </Label>
-                      <Input 
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        placeholder="Your name"
-                        required
-                        className="mt-2"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="email" className="text-forest-deep font-medium">
-                        Email Address *
-                      </Label>
-                      <Input 
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="your.email@example.com"
-                        required
-                        className="mt-2"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="organization" className="text-forest-deep font-medium">
-                        Organization/Company
-                      </Label>
-                      <Input 
-                        id="organization"
-                        value={formData.organization}
-                        onChange={(e) => setFormData({...formData, organization: e.target.value})}
-                        placeholder="Organization name (optional)"
-                        className="mt-2"
-                      />
-                    </div>
-                    
-                    <div>
-                      <Label htmlFor="type" className="text-forest-deep font-medium">
-                        Inquiry Type *
-                      </Label>
-                      <Select onValueChange={(value) => setFormData({...formData, type: value})}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="partnership">Partnership Opportunity</SelectItem>
-                          <SelectItem value="government">Government Collaboration</SelectItem>
-                          <SelectItem value="ngo">NGO/Charity Partnership</SelectItem>
-                          <SelectItem value="education">Education/Academic Inquiry</SelectItem>
-                          <SelectItem value="media">Media/Press Inquiry</SelectItem>
-                          <SelectItem value="investment">Investment/Sponsorship</SelectItem>
-                          <SelectItem value="volunteer">Volunteer/Individual Support</SelectItem>
-                          <SelectItem value="general">General Inquiry</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="subject" className="text-forest-deep font-medium">
-                      Subject *
-                    </Label>
-                    <Input 
-                      id="subject"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                      placeholder="Brief description of your inquiry"
-                      required
-                      className="mt-2"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message" className="text-forest-deep font-medium">
-                      Message *
-                    </Label>
-                    <Textarea 
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      placeholder="Tell us about your organization, your goals, and how you'd like to collaborate with Whimsy Films. The more details you provide, the better we can assist you."
-                      required
-                      rows={6}
-                      className="mt-2"
-                    />
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" variant="default" size="lg" className="flex-1">
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </Button>
-                    <Button type="button" variant="outline" size="lg" className="flex-1">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      Schedule Call Instead
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Information */}
-      <section id="partnership-info" className="py-16 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-forest-deep mb-6">
-              Partnership Opportunities
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We work with diverse organizations worldwide. Find the partnership 
-              type that best matches your goals and interests.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {partnershipTypes.slice(0, 5).map((type, index) => (
-              <Card key={index} className="text-center hover:shadow-soft transition-all duration-300">
-                <CardContent className="p-8">
-                  <div className="text-primary mb-4 flex justify-center">
-                    {type.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-forest-deep mb-3">
-                    {type.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {type.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Card className="bg-gradient-hero border-0 max-w-2xl mx-auto">
-              <CardContent className="p-8 text-white">
-                <Globe className="h-12 w-12 text-gold-warm mx-auto mb-4" />
-                <h3 className="text-2xl font-semibold mb-4">
-                  Don't See Your Organization Type?
-                </h3>
-                <p className="text-ivory/90 mb-6">
-                  We're always open to innovative partnerships. If you share our mission 
-                  of cultural preservation and environmental protection, let's explore 
-                  how we can work together.
-                </p>
-                <Button variant="warm" size="lg" asChild>
-                  <a href="#contact-form">Discuss Custom Partnership</a>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-    </div>
+    <StandardPageLayout
+      featuredBlocks={featuredBlocks}
+      contentSections={contentSections}
+      heroSection={heroSection}
+    />
   );
 };
 
