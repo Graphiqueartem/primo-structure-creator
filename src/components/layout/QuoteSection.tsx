@@ -16,23 +16,23 @@ export const QuoteSection = ({
   decorativeElements 
 }: QuoteSectionProps) => {
   return (
-    <section className={`py-20 relative overflow-hidden ${backgroundClass}`}>
+    <section className={`py-12 md:py-16 lg:py-20 relative overflow-hidden ${backgroundClass}`}>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-10 text-9xl font-serif text-forest-deep">"</div>
-        <div className="absolute bottom-10 left-10 text-9xl font-serif text-forest-deep rotate-180">"</div>
+        <div className="absolute top-10 right-10 text-6xl md:text-9xl font-serif text-forest-deep">"</div>
+        <div className="absolute bottom-10 left-10 text-6xl md:text-9xl font-serif text-forest-deep rotate-180">"</div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <blockquote className="text-2xl md:text-3xl font-serif italic text-forest-deep mb-8 leading-relaxed">
+          <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep mb-6 md:mb-8 leading-relaxed">
             "{quote}"
           </blockquote>
           
           {(author || role) && (
             <div className="text-forest-deep/80">
               {author && (
-                <div className="font-semibold text-lg mb-1">{author}</div>
+                <div className="font-semibold text-base md:text-lg mb-1">{author}</div>
               )}
               {role && (
                 <div className="text-sm font-medium">{role}</div>
@@ -41,7 +41,7 @@ export const QuoteSection = ({
           )}
           
           {decorativeElements && (
-            <div className="mt-8">
+            <div className="mt-6 md:mt-8">
               {decorativeElements}
             </div>
           )}

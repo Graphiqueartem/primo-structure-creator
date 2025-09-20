@@ -222,11 +222,11 @@ const About = () => {
             Every partnership amplifies our impact and brings us closer to a world where every child can see 
             themselves as heroes protecting the natural world.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
               <Link to="/get-involved">Get Involved</Link>
             </Button>
           </div>

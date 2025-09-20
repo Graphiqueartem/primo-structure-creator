@@ -1,142 +1,54 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const location = useLocation();
-
-  const toggleDropdown = (title: string) => {
-    setOpenDropdowns(prev => 
-      prev.includes(title) 
-        ? prev.filter(item => item !== title)
-        : [...prev, title]
-    );
-  };
 
   const navigationItems = [
     { title: "Home", href: "/" },
-    {
-      title: "About Us", 
-      href: "/about",
-      items: [
-        { title: "Who We Are", href: "/about" },
-        { title: "Our Story", href: "/about#story" },
-        { title: "Our Team", href: "/about#team" },
-      ],
-    },
-    {
-      title: "Our Vision",
-      href: "/vision", 
-      items: [
-        { title: "Mission & Values", href: "/vision" },
-        { title: "Why Storytelling Matters", href: "/vision#storytelling" },
-        { title: "The Future We Are Building", href: "/vision#future" },
-      ],
-    },
-    {
-      title: "Our Impact",
-      href: "/impact",
-      items: [
-        { title: "Conservation Impact", href: "/impact#conservation" },
-        { title: "Cultural Impact", href: "/impact#cultural" },
-        { title: "Education & Social Impact", href: "/impact#education" },
-        { title: "Economic Impact", href: "/impact#economic" },
-      ],
-    },
-    {
-      title: "Our Productions",
-      href: "/productions",
-      items: [
-        { title: "Current Development Slate", href: "/productions" },
-        { title: "Our Approach", href: "/productions#approach" },
-      ],
-    },
-    {
-      title: "Partnerships",
-      href: "/partnerships",
-      items: [
-        { title: "Governments", href: "/partnerships#governments" },
-        { title: "NGOs & Charities", href: "/partnerships#ngos" },
-        { title: "Cultural Organisations", href: "/partnerships#cultural" },
-        { title: "Education Networks", href: "/partnerships#education" },
-        { title: "Media & Industry", href: "/partnerships#media" },
-        { title: "Investors", href: "/partnerships#investors" },
-      ],
-    },
+    { title: "About", href: "/about" },
+    { title: "Vision", href: "/vision" },
+    { title: "Impact", href: "/impact" },
+    { title: "Productions", href: "/productions" },
+    { title: "Partnerships", href: "/partnerships" },
     { title: "Get Involved", href: "/get-involved" },
-    { title: "News & Insights", href: "/news" },
+    { title: "News", href: "/news" },
     { title: "Contact", href: "/contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
-      <div className="container mx-auto px-2 sm:px-4 lg:px-6 max-w-full">
-        <div className="flex h-14 items-center justify-between gap-2">
+      <div className="container mx-auto px-4">
+        <div className="flex h-14 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-forest-deep">
+            <div className="text-xl md:text-2xl font-bold text-forest-deep">
               Whimsy<span className="text-gold-warm">Films</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList className="flex items-center space-x-1">
-              {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
-                  {item.items ? (
-                    <div className="relative">
-                      <Link to={item.href || `/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <NavigationMenuTrigger className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                          {item.title}
-                        </NavigationMenuTrigger>
-                      </Link>
-                      <NavigationMenuContent className="z-[100]">
-                        <div className="grid gap-1 p-4 w-64 bg-background border border-border shadow-lg rounded-md">
-                          {item.items.map((subItem) => (
-                            <NavigationMenuLink key={subItem.href} asChild>
-                              <Link
-                                to={subItem.href}
-                                className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                              >
-                                {subItem.title}
-                              </Link>
-                            </NavigationMenuLink>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </div>
-                  ) : (
-                    <Link to={item.href}>
-                      <NavigationMenuLink
-                        className={cn(
-                          "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50",
-                          location.pathname === item.href && "bg-accent/50"
-                        )}
-                      >
-                        {item.title}
-                      </NavigationMenuLink>
-                    </Link>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-
+          <div className="hidden lg:flex items-center space-x-6">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md hover:bg-accent",
+                  location.pathname === item.href 
+                    ? "text-primary bg-accent/50" 
+                    : "text-muted-foreground"
+                )}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
 
           {/* Mobile menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -146,45 +58,22 @@ const Navigation = () => {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 overflow-y-auto">
-              <div className="flex flex-col space-y-2 mt-8 px-2">
+            <SheetContent side="right" className="w-80 overflow-y-auto bg-background border-border">
+              <div className="flex flex-col space-y-3 mt-8 px-2">
                 {navigationItems.map((item) => (
-                  <div key={item.title}>
-                    {item.items ? (
-                      <Collapsible 
-                        open={openDropdowns.includes(item.title)}
-                        onOpenChange={() => toggleDropdown(item.title)}
-                      >
-                        <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-forest-deep py-2 hover:text-primary transition-colors">
-                          {item.title}
-                          <ChevronDown className={cn(
-                            "h-4 w-4 transition-transform duration-200",
-                            openDropdowns.includes(item.title) && "rotate-180"
-                          )} />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="pl-4 space-y-1 pb-2">
-                          {item.items.map((subItem) => (
-                            <Link
-                              key={subItem.href}
-                              to={subItem.href}
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </CollapsibleContent>
-                      </Collapsible>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        className="block font-medium text-foreground hover:text-primary transition-colors py-2"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.title}
-                      </Link>
+                  <Link
+                    key={item.title}
+                    to={item.href}
+                    className={cn(
+                      "block font-medium transition-colors py-3 px-3 rounded-md hover:bg-accent",
+                      location.pathname === item.href 
+                        ? "text-primary bg-accent/50" 
+                        : "text-foreground hover:text-primary"
                     )}
-                  </div>
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
                 ))}
               </div>
             </SheetContent>

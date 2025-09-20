@@ -22,7 +22,7 @@ export const PageHeader = ({
   decorativeElements
 }: PageHeaderProps) => {
   return (
-    <section className={`relative py-20 overflow-hidden ${backgroundClass}`}>
+    <section className={`relative py-12 md:py-16 lg:py-20 overflow-hidden ${backgroundClass}`}>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
@@ -33,33 +33,33 @@ export const PageHeader = ({
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {badge && (
-            <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium bg-white/20 text-current border-white/30">
+            <Badge variant="secondary" className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-white/20 text-current border-white/30">
               {badge}
             </Badge>
           )}
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 tracking-tight leading-tight">
             {title}
           </h1>
           
           {subtitle && (
-            <h2 className="text-xl md:text-2xl text-current/90 mb-6 font-medium">
+            <h2 className="text-lg md:text-xl lg:text-2xl text-current/90 mb-4 md:mb-6 font-medium">
               {subtitle}
             </h2>
           )}
           
-          <div className="text-lg md:text-xl text-current/80 mb-10 leading-relaxed max-w-3xl mx-auto">
+          <div className="text-base md:text-lg lg:text-xl text-current/80 mb-6 md:mb-8 lg:mb-10 leading-relaxed max-w-3xl mx-auto">
             {description}
           </div>
           
           {actions && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-6 md:mb-8">
               {actions}
             </div>
           )}
           
           {decorativeElements && (
-            <div className="mt-12">
+            <div className="mt-8 md:mt-12">
               {decorativeElements}
             </div>
           )}

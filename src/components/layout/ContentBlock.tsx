@@ -31,12 +31,12 @@ export const ContentBlock = ({
 
   if (variant === "minimal") {
     return (
-      <div className={`py-16 ${className}`}>
+      <div className={`py-8 md:py-12 lg:py-16 ${className}`}>
         <div className="container mx-auto px-4">
           {title && (
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
               {icon && <div className="mb-4 flex justify-center">{icon}</div>}
-              <h2 className="text-3xl md:text-4xl font-bold text-forest-deep mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-4 md:mb-6">
                 {title}
               </h2>
             </div>
@@ -48,18 +48,18 @@ export const ContentBlock = ({
   }
 
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`py-8 md:py-12 lg:py-16 ${className}`}>
       <div className="container mx-auto px-4">
         <Card className={getVariantClasses()}>
           {title && (
-            <CardHeader className="text-center pb-8">
+            <CardHeader className="text-center pb-6 md:pb-8">
               {icon && <div className="mb-4 flex justify-center">{icon}</div>}
-              <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
+              <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
                 {title}
               </CardTitle>
             </CardHeader>
           )}
-          <CardContent className="p-8">
+          <CardContent className="p-4 md:p-6 lg:p-8">
             {children}
           </CardContent>
         </Card>

@@ -66,52 +66,52 @@ const Index = () => {
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 text-center">
           Bringing together folklore, wildlife, and storytelling through innovative media production
         </p>
-        <div className="grid md:grid-cols-4 gap-6">
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-primary">
-                <BookOpen className="h-8 w-8" />
-              </div>
-              <CardTitle className="text-lg">Cultural Heritage</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">Authentic folklore from around the world</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-primary">
-                <Heart className="h-8 w-8" />
-              </div>
-              <CardTitle className="text-lg">Wildlife Stories</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">Conservation through storytelling</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-primary">
-                <Camera className="h-8 w-8" />
-              </div>
-              <CardTitle className="text-lg">Creative Production</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">Puppetry, AI, and live action</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-primary">
-                <Target className="h-8 w-8" />
-              </div>
-              <CardTitle className="text-lg">Global Impact</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">Educational content for children</p>
-            </CardContent>
-          </Card>
-        </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+              <CardHeader className="pb-3 md:pb-4">
+                <div className="mx-auto mb-3 md:mb-4 text-primary">
+                  <BookOpen className="h-6 w-6 md:h-8 md:w-8" />
+                </div>
+                <CardTitle className="text-base md:text-lg">Cultural Heritage</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <p className="text-xs md:text-sm text-muted-foreground">Authentic folklore from around the world</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+              <CardHeader className="pb-3 md:pb-4">
+                <div className="mx-auto mb-3 md:mb-4 text-primary">
+                  <Heart className="h-6 w-6 md:h-8 md:w-8" />
+                </div>
+                <CardTitle className="text-base md:text-lg">Wildlife Stories</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <p className="text-xs md:text-sm text-muted-foreground">Conservation through storytelling</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+              <CardHeader className="pb-3 md:pb-4">
+                <div className="mx-auto mb-3 md:mb-4 text-primary">
+                  <Camera className="h-6 w-6 md:h-8 md:w-8" />
+                </div>
+                <CardTitle className="text-base md:text-lg">Creative Production</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <p className="text-xs md:text-sm text-muted-foreground">Puppetry, AI, and live action</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+              <CardHeader className="pb-3 md:pb-4">
+                <div className="mx-auto mb-3 md:mb-4 text-primary">
+                  <Target className="h-6 w-6 md:h-8 md:w-8" />
+                </div>
+                <CardTitle className="text-base md:text-lg">Global Impact</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <p className="text-xs md:text-sm text-muted-foreground">Educational content for children</p>
+              </CardContent>
+            </Card>
+          </div>
       </ContentBlock>
 
       {/* Media Showcase */}
@@ -120,20 +120,20 @@ const Index = () => {
         variant="outlined"
         className="bg-forest-light/10"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
               We create magical content that brings folklore and wildlife together, 
               inspiring children to connect with nature and cultural heritage.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               <ImagePlaceholder />
               <VideoPlaceholder />
             </div>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             <ImagePlaceholder />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               <VideoPlaceholder />
               <ImagePlaceholder />
             </div>
@@ -154,20 +154,20 @@ const Index = () => {
         variant="default"
         className="bg-background"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-3 md:space-y-4">
             <VideoPlaceholder />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               <ImagePlaceholder />
               <VideoPlaceholder />
             </div>
           </div>
           <div>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
               Through the power of storytelling, we aim to preserve cultural heritage 
               while fostering a deep connection between children and the natural world.
             </p>
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
@@ -179,14 +179,14 @@ const Index = () => {
         title="Join Our Story"
         variant="gradient"
       >
-        <p className="text-lg text-forest-deep/80 mb-8 max-w-2xl mx-auto text-center">
+        <p className="text-base md:text-lg text-forest-deep/80 mb-6 md:mb-8 max-w-2xl mx-auto text-center">
           Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="default" size="lg" asChild>
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+          <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
             <Link to="/partnerships">Partner With Us</Link>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
             <Link to="/get-involved">Get Involved</Link>
           </Button>
         </div>
