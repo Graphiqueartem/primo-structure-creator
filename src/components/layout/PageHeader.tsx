@@ -22,7 +22,7 @@ export const PageHeader = ({
   decorativeElements
 }: PageHeaderProps) => {
   return (
-    <section className={`relative pt-20 pb-12 md:py-12 lg:py-16 overflow-hidden ${backgroundClass}`}>
+    <section className={`relative pt-20 pb-8 md:py-8 lg:py-10 overflow-hidden ${backgroundClass}`}>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>

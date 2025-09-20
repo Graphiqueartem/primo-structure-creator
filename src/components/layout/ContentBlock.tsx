@@ -31,7 +31,7 @@ export const ContentBlock = ({
 
   if (variant === "minimal") {
     return (
-      <div className={`py-8 md:py-12 lg:py-16 ${className}`}>
+      <div className={`py-4 md:py-6 lg:py-8 ${className}`}>
         <div className="container mx-auto px-6 md:px-4">
           {title && (
             <div className="text-center mb-10 md:mb-12">
@@ -50,7 +50,7 @@ export const ContentBlock = ({
   }
 
   return (
-    <section className={`py-8 md:py-12 lg:py-16 ${className}`}>
+    <section className={`py-4 md:py-6 lg:py-8 ${className}`}>
       <div className="container mx-auto px-6 md:px-4">
         <Card className={getVariantClasses()}>
           {title && (

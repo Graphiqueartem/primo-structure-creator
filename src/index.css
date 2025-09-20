@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Whimsy Films Brand Colors - Natural & Magical */
-    --background: 40 100% 99%;
+    --background: 270 50% 96%;
     --foreground: 160 15% 15%;
 
     --card: 40 100% 98%;
