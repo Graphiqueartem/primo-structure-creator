@@ -4,13 +4,13 @@ import turtleConservation from "@/assets/videos/turtle-conservation.jpg";
 
 const MissionSection = () => {
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8">
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-start max-w-7xl mx-auto">
+          <div className="lg:sticky lg:top-8">
             <Card className="border-0 shadow-magical bg-gradient-warm">
-              <CardContent className="p-8 lg:p-12">
-                <h3 className="text-2xl sm:text-3xl font-bold text-forest-deep mb-6">Our Mission</h3>
+              <CardContent className="p-12">
+                <h3 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-8">Our Mission</h3>
                 <div className="space-y-6 text-forest-deep/80 text-lg leading-relaxed">
                   <p>
                     At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. 
@@ -27,7 +27,7 @@ const MissionSection = () => {
                   </p>
                 </div>
                 
-                <div className="mt-8 p-6 bg-forest-deep/10 rounded-xl">
+                <div className="mt-8 p-8 bg-forest-deep/10 rounded-xl">
                   <p className="text-forest-deep font-bold text-center text-xl">
                     "We tell magical stories that protect nature and inspire generations."
                   </p>
@@ -36,8 +36,8 @@ const MissionSection = () => {
             </Card>
           </div>
 
-          <div className="space-y-6">
-            <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+          <div className="grid grid-cols-1 gap-8">
+            <div className="relative overflow-hidden rounded-xl aspect-[4/3] shadow-soft">
               <img 
                 src={culturalStorytelling2} 
                 alt="Children's cultural storytelling and theatre workshop"
@@ -45,7 +45,7 @@ const MissionSection = () => {
               />
             </div>
             
-            <div className="relative overflow-hidden rounded-xl aspect-video">
+            <div className="relative overflow-hidden rounded-xl aspect-video shadow-soft">
               <img 
                 src={turtleConservation} 
                 alt="Ocean conservation - Sea turtle swimming with fish"
@@ -59,7 +59,7 @@ const MissionSection = () => {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl aspect-video">
+            <div className="relative overflow-hidden rounded-xl aspect-video shadow-soft">
               <video 
                 src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
                 autoPlay 
