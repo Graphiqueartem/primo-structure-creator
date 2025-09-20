@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getValidRoute } from "@/utils/navigation";
 import { Button } from "@/components/ui/button";
 
 const ProductionSection = () => {
@@ -25,13 +26,13 @@ const ProductionSection = () => {
               
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
               <Button variant="default" size="lg" asChild>
-                <Link to="/productions">Watch Our Films</Link>
+                <Link to={getValidRoute("/productions")}>Watch Our Films</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/partnerships">Partner With Us</Link>
+                <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <Link to="/get-involved">Join the Journey</Link>
+                <Link to={getValidRoute("/get-involved")}>Join the Journey</Link>
               </Button>
             </div>
           </div>

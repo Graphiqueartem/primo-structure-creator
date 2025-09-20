@@ -6,6 +6,7 @@ import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { getValidRoute } from "@/utils/navigation";
 import { 
   Film, 
   Globe, 
@@ -22,50 +23,46 @@ const Index = () => {
   return (
     <>
       {/* Hero Section */}
-      <PageHeader
-        title="Where Storytelling Inspires Action"
-        subtitle="Stories connect us. Culture inspires us. Together we protect our planet."
-        description={
-          <div className="space-y-4">
-            <p>
-              Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
-            </p>
-          </div>
-        }
-        actions={
-          <>
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/vision">Discover Our Vision</Link>
-            </Button>
-          </>
-        }
-        decorativeElements={
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            <div className="relative overflow-hidden rounded-lg">
-              <VideoPlaceholder />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <Play className="h-12 w-12 text-white" />
-              </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Where Storytelling Inspires Action
+            </h1>
+            <h2 className="text-xl md:text-2xl text-white/90 mb-4">
+              Stories connect us. Culture inspires us. Together we protect our planet.
+            </h2>
+            <div className="text-lg text-white/80 mb-8">
+              <p>
+                Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
+              </p>
             </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <VideoPlaceholder />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <Play className="h-12 w-12 text-white" />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <VideoPlaceholder />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <Play className="h-12 w-12 text-white" />
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="default" size="lg" className="bg-white text-forest-deep hover:bg-white/90" asChild>
+                <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-forest-deep" asChild>
+                <Link to={getValidRoute("/vision")}>Discover Our Vision</Link>
+              </Button>
             </div>
           </div>
-        }
-        backgroundClass="bg-gradient-hero text-white"
-      />
+        </div>
+      </section>
 
       {/* Inspirational Quote Divider */}
       <QuoteSection 
@@ -91,10 +88,10 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="default" size="lg" asChild>
-                <Link to="/partnerships">Explore Partnerships</Link>
+                <Link to={getValidRoute("/partnerships")}>Explore Partnerships</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/get-involved">Register Your Interest</Link>
+                <Link to={getValidRoute("/get-involved")}>Register Your Interest</Link>
               </Button>
             </div>
           </div>
@@ -137,13 +134,13 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="default" size="lg" asChild>
-                <Link to="/productions">Watch Our Films</Link>
+                <Link to={getValidRoute("/productions")}>Watch Our Films</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/partnerships">Partner With Us</Link>
+                <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
               </Button>
               <Button variant="magical" size="lg" asChild>
-                <Link to="/get-involved">Join the Journey</Link>
+                <Link to={getValidRoute("/get-involved")}>Join the Journey</Link>
               </Button>
             </div>
           </div>
@@ -269,10 +266,10 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" asChild>
-                <Link to="/impact">Discover Our Impact</Link>
+                <Link to={getValidRoute("/impact")}>Discover Our Impact</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/partnerships">Partner With Us</Link>
+                <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
               </Button>
             </div>
           </div>

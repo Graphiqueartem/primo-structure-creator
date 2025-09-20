@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getValidRoute } from "@/utils/navigation";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
@@ -157,7 +158,7 @@ const Vision = () => {
               Stories are more than entertainment. They pass down cultural wisdom, shape childhood imagination, build empathy, and inspire societal change. Whimsy Films uses this power intentionally, turning folklore and wildlife storytelling into platforms for education, diplomacy, and conservation.
             </p>
             <Button variant="default" size="lg" asChild>
-              <Link to="/productions">Discover Our Approach</Link>
+              <Link to={getValidRoute("/productions")}>Discover Our Approach</Link>
             </Button>
           </div>
           <div className="space-y-4">

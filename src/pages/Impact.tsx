@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getValidRoute } from "@/utils/navigation";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
@@ -122,7 +123,7 @@ const Impact = () => {
                 <Link to="/partnerships">Partner With Us in Conservation</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/productions">Learn More About Our Wildlife Projects</Link>
+                <Link to={getValidRoute("/productions")}>Learn More About Our Wildlife Projects</Link>
               </Button>
             </div>
           </div>

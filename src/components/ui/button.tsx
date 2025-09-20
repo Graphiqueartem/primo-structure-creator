@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary-glow hover:shadow-magical transform hover:scale-105",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground hover:shadow-magical",
+        outline: "border-2 border-current bg-transparent text-current hover:bg-current hover:text-primary-foreground hover:shadow-magical transition-colors",
         secondary: "bg-secondary text-secondary-foreground hover:bg-gold-warm hover:shadow-warm transform hover:scale-105",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
