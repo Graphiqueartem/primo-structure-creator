@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { getValidRoute } from "@/utils/navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
 import { StatsSection } from "@/components/layout/StatsSection";
@@ -47,44 +48,57 @@ const Vision = () => {
 
   return (
     <>
-      <PageHeader
-        badge="Our Vision"
-        title="Reimagining Stories, Inspiring Change"
-        subtitle="Mission & Values"
-        description={
-          <div className="space-y-4">
-            <p>
-              At Whimsy Films, our mission is to create films that celebrate folklore, protect wildlife, and inspire children everywhere to imagine a more inclusive, compassionate, and sustainable world.
-            </p>
-            <div className="space-y-3">
-              <div className="text-left">
-                <p><strong>Imagination:</strong> wonder is the seed of empathy and action.</p>
-                <p><strong>Respect:</strong> cultural and ecological authenticity.</p>
-                <p><strong>Innovation:</strong> technology without losing artistry.</p>
-                <p><strong>Collaboration:</strong> co-created with governments, NGOs, educators, and communities.</p>
-                <p><strong>Impact:</strong> every project contributes to cultural, social, and environmental good.</p>
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="mb-4">
+              <Badge variant="secondary" className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-white/20 text-white border-white/30">
+                Our Vision
+              </Badge>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Reimagining Stories, Inspiring Change
+            </h1>
+            <h2 className="text-xl md:text-2xl text-white/90 mb-4">
+              Mission & Values
+            </h2>
+            <div className="text-lg text-white/80 mb-8 space-y-4">
+              <p className="font-semibold">
+                At Whimsy Films, our mission is to create films that celebrate folklore, protect wildlife, and inspire children everywhere to imagine a more inclusive, compassionate, and sustainable world.
+              </p>
+              <div className="space-y-3 text-left max-w-2xl mx-auto">
+                <p className="font-semibold"><strong>Imagination:</strong> wonder is the seed of empathy and action.</p>
+                <p className="font-semibold"><strong>Respect:</strong> cultural and ecological authenticity.</p>
+                <p className="font-semibold"><strong>Innovation:</strong> technology without losing artistry.</p>
+                <p className="font-semibold"><strong>Collaboration:</strong> co-created with governments, NGOs, educators, and communities.</p>
+                <p className="font-semibold"><strong>Impact:</strong> every project contributes to cultural, social, and environmental good.</p>
               </div>
             </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="warm" size="lg" asChild>
+                <Link to="/partnerships">Join Our Mission</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="/get-involved">Join the Movement</Link>
+              </Button>
+            </div>
           </div>
-        }
-        actions={
-          <>
-            <Button variant="warm" size="lg" asChild>
-              <Link to="/partnerships">Join Our Mission</Link>
-            </Button>
-            <Button variant="magical" size="lg" asChild>
-              <Link to="/get-involved">Join the Movement</Link>
-            </Button>
-          </>
-        }
-        decorativeElements={
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <VideoPlaceholder />
-            <VideoPlaceholder />
-            <VideoPlaceholder />
-          </div>
-        }
-      />
+        </div>
+      </section>
 
       {/* Mission & Values Section */}
       <section id="mission-values" className="py-1 md:py-4 lg:py-5">

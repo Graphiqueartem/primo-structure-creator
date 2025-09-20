@@ -111,62 +111,47 @@ const Productions = () => {
 
   return (
     <>
-      <PageHeader
-        badge="Where Stories Come Alive"
-        title="Where Folklore Meets the Screen"
-        description={
-          <p>
-            Whimsy Films' productions are unlike anything else in today's media landscape. We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals to create timeless stories that feel magical, tactile, and emotionally real.
-          </p>
-        }
-        actions={
-          <>
-            <Button variant="warm" size="lg" asChild>
-              <Link to="#our-approach">Explore Our Storytelling Approach</Link>
-            </Button>
-            <Button variant="magical" size="lg" asChild>
-              <Link to="#development-slate">Register for Updates</Link>
-            </Button>
-          </>
-        }
-        decorativeElements={
-          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            <div className="text-center">
-              <video 
-                src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-              />
-              <p className="text-sm text-current/80">Nature Stories</p>
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="mb-4">
+              <Badge variant="secondary" className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-white/20 text-white border-white/30">
+                Where Stories Come Alive
+              </Badge>
             </div>
-            <div className="text-center">
-              <video 
-                src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-              />
-              <p className="text-sm text-current/80">Cultural Tales</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Where Folklore Meets the Screen
+            </h1>
+            <div className="text-lg text-white/80 mb-8">
+              <p className="font-semibold">
+                Whimsy Films' productions are unlike anything else in today's media landscape. We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals to create timeless stories that feel magical, tactile, and emotionally real.
+              </p>
             </div>
-            <div className="text-center">
-              <video 
-                src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-              />
-              <p className="text-sm text-current/80">International Reach</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="warm" size="lg" asChild>
+                <Link to="#our-approach">Explore Our Storytelling Approach</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="#development-slate">Register for Updates</Link>
+              </Button>
             </div>
           </div>
-        }
-      />
+        </div>
+      </section>
 
       {/* Production Stats */}
       <StatsSection 

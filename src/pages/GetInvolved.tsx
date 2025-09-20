@@ -91,37 +91,52 @@ const GetInvolved = () => {
 
   return (
     <>
-      <PageHeader
-        badge="Get Involved"
-        title="Your Skills, Your Passion, Our Shared Mission"
-        subtitle="Ready to Make an Impact?"
-        description={
-          <div className="space-y-4">
-            <p>
-              Every voice matters, every skill contributes, and every passion makes a difference. 
-              Join our global community of creatives, educators, and conservationists working together 
-              to create positive change through storytelling.
-            </p>
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="mb-4">
+              <Badge variant="secondary" className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-white/20 text-white border-white/30">
+                Get Involved
+              </Badge>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Your Skills, Your Passion, Our Shared Mission
+            </h1>
+            <h2 className="text-xl md:text-2xl text-white/90 mb-4">
+              Ready to Make an Impact?
+            </h2>
+            <div className="text-lg text-white/80 mb-8">
+              <p className="font-semibold">
+                Every voice matters, every skill contributes, and every passion makes a difference. 
+                Join our global community of creatives, educators, and conservationists working together 
+                to create positive change through storytelling.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="warm" size="lg" asChild>
+                <Link to="/contact">Get Started Today</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="/partnerships">Learn About Partnerships</Link>
+              </Button>
+            </div>
           </div>
-        }
-        actions={
-          <>
-            <Button variant="warm" size="lg" asChild>
-              <Link to="/contact">Get Started Today</Link>
-            </Button>
-            <Button variant="magical" size="lg" asChild>
-              <Link to="/partnerships">Learn About Partnerships</Link>
-            </Button>
-          </>
-        }
-        decorativeElements={
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <ImagePlaceholder />
-            <ImagePlaceholder />
-            <ImagePlaceholder />
-          </div>
-        }
-      />
+        </div>
+      </section>
 
       {/* Community Stats */}
       <StatsSection 
