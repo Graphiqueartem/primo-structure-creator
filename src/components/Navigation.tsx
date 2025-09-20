@@ -105,8 +105,8 @@ const Navigation = () => {
                           {item.title}
                         </NavigationMenuTrigger>
                       </Link>
-                      <NavigationMenuContent className="absolute top-full left-0 mt-1 z-50">
-                        <div className="grid gap-1 p-3 w-64 bg-background border border-border shadow-lg rounded-md">
+                      <NavigationMenuContent className="z-[100]">
+                        <div className="grid gap-1 p-4 w-64 bg-background border border-border shadow-lg rounded-md">
                           {item.items.map((subItem) => (
                             <NavigationMenuLink key={subItem.href} asChild>
                               <Link
@@ -137,12 +137,6 @@ const Navigation = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
-            <Button variant="hero" size="sm" className="text-xs px-3 py-1.5 whitespace-nowrap" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
-            </Button>
-          </div>
 
           {/* Mobile menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -192,13 +186,6 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 border-t border-border">
-                  <Button variant="hero" size="default" className="w-full" asChild>
-                    <Link to="/partnerships" onClick={() => setIsOpen(false)}>
-                      Partner With Us
-                    </Link>
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
