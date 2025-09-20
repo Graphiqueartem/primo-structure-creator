@@ -244,15 +244,45 @@ const Partnerships = () => {
         variant="minimal"
         className="bg-forest-light/5"
       >
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <VideoPlaceholder />
-          <VideoPlaceholder />
-          <VideoPlaceholder />
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <ImagePlaceholder />
-          <ImagePlaceholder />
-          <ImagePlaceholder />
+        <div className="space-y-6 md:space-y-0">
+          {/* Mobile: Text breaks between media */}
+          <div className="block md:hidden space-y-4">
+            <VideoPlaceholder />
+            <div className="text-center px-4">
+              <p className="text-muted-foreground">Discover how our partnerships create meaningful impact across cultures and communities worldwide.</p>
+            </div>
+            <VideoPlaceholder />
+            <div className="text-center px-4">
+              <p className="text-muted-foreground">From government collaborations to grassroots initiatives, every partnership tells a unique story.</p>
+            </div>
+            <VideoPlaceholder />
+            <div className="text-center px-4">
+              <p className="text-muted-foreground">See the transformative power of cultural storytelling in action.</p>
+            </div>
+            <ImagePlaceholder />
+            <div className="text-center px-4">
+              <p className="text-muted-foreground">Behind-the-scenes glimpses of our collaborative creative process.</p>
+            </div>
+            <ImagePlaceholder />
+            <div className="text-center px-4">
+              <p className="text-muted-foreground">Cultural preservation efforts captured through our lens.</p>
+            </div>
+            <ImagePlaceholder />
+          </div>
+          
+          {/* Desktop: Grid layout */}
+          <div className="hidden md:block">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <ImagePlaceholder />
+              <ImagePlaceholder />
+              <ImagePlaceholder />
+            </div>
+          </div>
         </div>
       </ContentBlock>
 
@@ -268,7 +298,7 @@ const Partnerships = () => {
           and environmental protection.
         </p>
 
-        <div className="space-y-12">
+        <div className="space-y-1 md:space-y-2">
           {partnerTypes.map((partner, index) => (
             <div key={index} id={partner.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}>
               <Card className={`${partner.color} border-2 shadow-soft hover:shadow-magical transition-all duration-500`}>
@@ -294,7 +324,7 @@ const Partnerships = () => {
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-6 p-8 pt-0">
+                <CardContent className="space-y-3 md:space-y-6 p-4 md:p-8 pt-0">
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {partner.description}
                   </p>

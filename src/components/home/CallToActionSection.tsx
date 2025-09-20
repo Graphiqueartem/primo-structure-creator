@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { getValidRoute } from "@/utils/navigation";
 
 const CallToActionSection = () => {
   return (
@@ -17,13 +18,13 @@ const CallToActionSection = () => {
           
           <div className="flex flex-col gap-6 sm:flex-row sm:gap-8 justify-center items-center">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
+              <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
             </Button>
             <Button variant="magical" size="xl" asChild>
-              <Link to="/get-involved">Support Wildlife Storytelling</Link>
+              <Link to={getValidRoute("/get-involved")}>Support Wildlife Storytelling</Link>
             </Button>
             <Button variant="warm" size="xl" asChild>
-              <Link to="/get-involved">Get Involved</Link>
+              <Link to={getValidRoute("/get-involved")}>Get Involved</Link>
             </Button>
           </div>
         </div>

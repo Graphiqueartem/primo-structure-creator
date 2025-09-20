@@ -19,16 +19,16 @@ export const ContentSection = ({
   const MediaComponent = mediaType === "image" ? ImagePlaceholder : VideoPlaceholder;
   
   return (
-    <section className={`py-3 md:py-4 lg:py-5 ${backgroundColor}`}>
+    <section className={`py-1 md:py-4 lg:py-5 ${backgroundColor}`}>
       <div className="container mx-auto px-4">
-        <div className={`grid lg:grid-cols-2 gap-8 items-center ${
+        <div className={`grid lg:grid-cols-2 gap-4 md:gap-8 items-center ${
           mediaPosition === "left" ? "lg:grid-flow-col-dense" : ""
         }`}>
           <div className={mediaPosition === "left" ? "lg:col-start-2" : ""}>
-            <h2 className="text-3xl font-bold text-forest-deep mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-forest-deep mb-2 md:mb-4">
               {title}
             </h2>
-            <div className="text-muted-foreground space-y-4">
+            <div className="text-muted-foreground space-y-2 md:space-y-4">
               {content}
             </div>
           </div>

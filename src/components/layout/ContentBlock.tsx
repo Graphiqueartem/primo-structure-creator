@@ -31,17 +31,17 @@ export const ContentBlock = ({
 
   if (variant === "minimal") {
     return (
-      <div className={`py-4 md:py-6 lg:py-8 ${className}`}>
-        <div className="container mx-auto px-6 md:px-4">
+      <div className={`py-1 md:py-4 lg:py-5 ${className}`}>
+        <div className="container mx-auto px-4 md:px-4">
           {title && (
-            <div className="text-center mb-4 md:mb-5">
-              {icon && <div className="mb-3 flex justify-center">{icon}</div>}
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-3 md:mb-4 px-2">
+            <div className="text-center mb-2 md:mb-5">
+              {icon && <div className="mb-2 flex justify-center">{icon}</div>}
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-forest-deep mb-2 md:mb-4 px-1">
                 {title}
               </h2>
             </div>
           )}
-          <div className="px-2">
+          <div className="px-1">
             {children}
           </div>
         </div>
@@ -50,18 +50,18 @@ export const ContentBlock = ({
   }
 
   return (
-    <section className={`py-4 md:py-6 lg:py-8 ${className}`}>
-      <div className="container mx-auto px-6 md:px-4">
+    <section className={`py-1 md:py-4 lg:py-5 ${className}`}>
+      <div className="container mx-auto px-4 md:px-4">
         <Card className={getVariantClasses()}>
           {title && (
-            <CardHeader className="text-center pb-4 md:pb-5 px-4 md:px-6">
-              {icon && <div className="mb-3 flex justify-center">{icon}</div>}
-              <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 px-2">
+            <CardHeader className="text-center pb-2 md:pb-5 px-3 md:px-6">
+              {icon && <div className="mb-2 flex justify-center">{icon}</div>}
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 md:mb-3 px-1">
                 {title}
               </CardTitle>
             </CardHeader>
           )}
-          <CardContent className="p-4 md:p-5 lg:p-6">
+          <CardContent className="p-2 md:p-5 lg:p-6">
             {children}
           </CardContent>
         </Card>
