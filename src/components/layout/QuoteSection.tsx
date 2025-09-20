@@ -19,23 +19,23 @@ export const QuoteSection = ({
     <section className={`py-12 md:py-16 lg:py-20 relative overflow-hidden ${backgroundClass}`}>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-10 text-6xl md:text-9xl font-serif text-forest-deep">"</div>
-        <div className="absolute bottom-10 left-10 text-6xl md:text-9xl font-serif text-forest-deep rotate-180">"</div>
+        <div className="absolute top-10 right-10 text-6xl md:text-9xl font-serif text-current">"</div>
+        <div className="absolute bottom-10 left-10 text-6xl md:text-9xl font-serif text-current rotate-180">"</div>
       </div>
       
       <div className="container mx-auto px-6 md:px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep mb-6 md:mb-8 leading-relaxed px-2">
+          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-current mb-6 md:mb-8 leading-relaxed px-2">
             "{quote}"
           </blockquote>
           
           {(author || role) && (
-            <div className="text-forest-deep/80 px-2">
+            <div className="text-current/90 px-2">
               {author && (
                 <div className="font-semibold text-sm sm:text-base md:text-lg mb-1">{author}</div>
               )}
               {role && (
-                <div className="text-xs sm:text-sm font-medium">{role}</div>
+                <div className="text-xs sm:text-sm font-medium text-current/80">{role}</div>
               )}
             </div>
           )}
