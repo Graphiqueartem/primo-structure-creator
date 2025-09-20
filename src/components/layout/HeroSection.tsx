@@ -16,7 +16,7 @@ export const HeroSection = ({
   backgroundClass = "bg-gradient-hero text-white"
 }: HeroSectionProps) => {
   return (
-    <section className={`py-16 ${backgroundClass}`}>
+    <section className={`py-8 md:py-10 lg:py-12 ${backgroundClass}`}>
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
