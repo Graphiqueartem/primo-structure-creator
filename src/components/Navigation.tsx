@@ -21,6 +21,8 @@ const Navigation = () => {
     { title: "Contact", href: "/contact" },
   ];
 
+  const centeredLinks = navigationItems.filter((i) => i.title !== "Contact");
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
       <div className="container mx-auto px-4">
@@ -32,22 +34,29 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {navigationItems.map((item) => (
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex flex-1 items-center justify-center space-x-6">
+            {centeredLinks.map((item) => (
               <Link
                 key={item.title}
                 to={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md hover:bg-accent",
-                  location.pathname === item.href 
-                    ? "text-primary bg-accent/50" 
-                    : "text-muted-foreground"
+                  location.pathname === item.href
+                    ? "text-primary bg-accent/50"
+                    : "text-muted-foreground",
                 )}
               >
                 {item.title}
               </Link>
             ))}
+          </div>
+
+          {/* Desktop CTA - Right */}
+          <div className="hidden lg:flex items-center">
+            <Button variant="magical" size="sm" asChild>
+              <Link to="/contact">Contact Us</Link>
+            </Button>
           </div>
 
           {/* Mobile menu */}
@@ -59,16 +68,21 @@ const Navigation = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80 overflow-y-auto bg-background border-border">
-              <div className="flex flex-col space-y-3 mt-8 px-2">
-                {navigationItems.map((item) => (
+              <div className="mt-6 px-2">
+                <Button variant="magical" className="w-full" asChild>
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
+                </Button>
+              </div>
+              <div className="flex flex-col space-y-3 mt-4 px-2">
+                {centeredLinks.map((item) => (
                   <Link
                     key={item.title}
                     to={item.href}
                     className={cn(
                       "block font-medium transition-colors py-3 px-3 rounded-md hover:bg-accent",
-                      location.pathname === item.href 
-                        ? "text-primary bg-accent/50" 
-                        : "text-foreground hover:text-primary"
+                      location.pathname === item.href
+                        ? "text-primary bg-accent/50"
+                        : "text-foreground hover:text-primary",
                     )}
                     onClick={() => setIsOpen(false)}
                   >
