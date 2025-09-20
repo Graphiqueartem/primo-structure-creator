@@ -23,25 +23,25 @@ export const QuoteSection = ({
         <div className="absolute bottom-10 left-10 text-6xl md:text-9xl font-serif text-forest-deep rotate-180">"</div>
       </div>
       
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto px-6 md:px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep mb-6 md:mb-8 leading-relaxed">
+          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep mb-6 md:mb-8 leading-relaxed px-2">
             "{quote}"
           </blockquote>
           
           {(author || role) && (
-            <div className="text-forest-deep/80">
+            <div className="text-forest-deep/80 px-2">
               {author && (
-                <div className="font-semibold text-base md:text-lg mb-1">{author}</div>
+                <div className="font-semibold text-sm sm:text-base md:text-lg mb-1">{author}</div>
               )}
               {role && (
-                <div className="text-sm font-medium">{role}</div>
+                <div className="text-xs sm:text-sm font-medium">{role}</div>
               )}
             </div>
           )}
           
           {decorativeElements && (
-            <div className="mt-6 md:mt-8">
+            <div className="mt-6 md:mt-8 px-2">
               {decorativeElements}
             </div>
           )}

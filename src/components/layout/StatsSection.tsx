@@ -22,38 +22,38 @@ export const StatsSection = ({
   backgroundClass = "bg-forest-light/10" 
 }: StatsSectionProps) => {
   return (
-    <section className={`py-8 md:py-12 lg:py-16 ${backgroundClass}`}>
-      <div className="container mx-auto px-4">
+    <section className={`py-12 md:py-16 lg:py-20 ${backgroundClass}`}>
+      <div className="container mx-auto px-6 md:px-4">
         {(title || subtitle) && (
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-10 md:mb-12">
             {title && (
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-3 md:mb-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-forest-deep mb-3 md:mb-4 px-2">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
                 {subtitle}
               </p>
             )}
           </div>
         )}
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 px-2">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105 bg-background/50 backdrop-blur-sm border-forest-light/30">
-              <CardContent className="p-4 md:p-6">
-                <div className="text-primary mb-3 md:mb-4 flex justify-center">
+              <CardContent className="p-3 sm:p-4 md:p-6">
+                <div className="text-primary mb-2 md:mb-3 lg:mb-4 flex justify-center">
                   {stat.icon}
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-forest-deep mb-1 md:mb-2">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-forest-deep mb-1 md:mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm md:text-lg font-semibold text-forest-deep mb-1 md:mb-2">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-forest-deep mb-1 md:mb-2">
                   {stat.label}
                 </div>
                 {stat.description && (
-                  <p className="text-xs md:text-sm text-muted-foreground">
+                  <p className="text-xs md:text-sm text-muted-foreground leading-tight">
                     {stat.description}
                   </p>
                 )}
