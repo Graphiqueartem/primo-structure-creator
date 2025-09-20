@@ -1,88 +1,139 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const quickLinks = [
+    { title: "About Us", href: "/about" },
+    { title: "Our Vision", href: "/vision" },
+    { title: "Our Impact", href: "/impact" },
+    { title: "Productions", href: "/productions" },
+    { title: "Partnerships", href: "/partnerships" },
+    { title: "Get Involved", href: "/get-involved" },
+    { title: "Contact", href: "/contact" },
+  ];
 
-  const footerLinks = [
-    {
-      title: "Company",
-      links: [
-        { name: "About", href: "/about" },
-        { name: "Services", href: "/services" },
-        { name: "Contact", href: "/contact" },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Blog", href: "#" },
-        { name: "Documentation", href: "#" },
-        { name: "Support", href: "#" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { name: "Privacy Policy", href: "#" },
-        { name: "Terms of Service", href: "#" },
-        { name: "Cookie Policy", href: "#" },
-      ],
-    },
+  const legalLinks = [
+    { title: "Privacy Policy", href: "/privacy" },
+    { title: "Terms of Use", href: "/terms" },
+    { title: "Careers", href: "/careers" },
   ];
 
   return (
-    <footer className="border-t bg-gradient-subtle">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-primary"></div>
-              <span className="text-xl font-semibold">Your Brand</span>
-            </div>
-            <p className="text-muted-foreground text-sm max-w-xs">
-              Building exceptional digital experiences with modern design and cutting-edge technology.
+    <footer className="bg-forest-deep text-ivory">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand & Mission */}
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <div className="text-2xl font-bold">
+                Whimsy<span className="text-gold-warm">Films</span>
+              </div>
+            </Link>
+            <p className="text-ivory/80 mb-6 max-w-md">
+              Where storytelling inspires action. We create magical films rooted in folklore 
+              and wildlife to inspire children, empower communities, and protect our natural world.
             </p>
+            
+            {/* Newsletter Signup */}
+            <div className="space-y-3">
+              <h4 className="font-semibold text-gold-warm">Join Our Newsletter</h4>
+              <div className="flex gap-2 max-w-md">
+                <Input 
+                  placeholder="Your email address" 
+                  className="bg-ivory/10 border-ivory/20 text-ivory placeholder:text-ivory/60"
+                />
+                <Button variant="warm" size="default">
+                  Subscribe
+                </Button>
+              </div>
+            </div>
           </div>
 
-          {/* Footer Links */}
-          {footerLinks.map((section, index) => (
-            <div key={index} className="space-y-4">
-              <h3 className="font-semibold">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link
-                      to={link.href}
-                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold text-gold-warm mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    to={link.href}
+                    className="text-ivory/80 hover:text-gold-warm transition-colors duration-200"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact & Social */}
+          <div>
+            <h4 className="font-semibold text-gold-warm mb-4">Connect With Us</h4>
+            
+            {/* Contact Info */}
+            <div className="space-y-2 mb-6">
+              <p className="text-ivory/80">
+                <span className="font-medium">Email:</span><br />
+                hello@whimsyfilms.com
+              </p>
+              <p className="text-ivory/80">
+                <span className="font-medium">Location:</span><br />
+                United Kingdom
+              </p>
             </div>
-          ))}
+
+            {/* Social Media */}
+            <div className="space-y-3">
+              <h5 className="font-medium text-ivory">Follow Our Journey</h5>
+              <div className="flex gap-3">
+                <Button variant="ghost" size="icon" className="text-ivory hover:text-gold-warm hover:bg-ivory/10">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon" className="text-ivory hover:text-gold-warm hover:bg-ivory/10">
+                  <Twitter className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon" className="text-ivory hover:text-gold-warm hover:bg-ivory/10">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon" className="text-ivory hover:text-gold-warm hover:bg-ivory/10">
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon" className="text-ivory hover:text-gold-warm hover:bg-ivory/10">
+                  <Youtube className="h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} Your Brand. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="sr-only">Twitter</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="sr-only">LinkedIn</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
+        <Separator className="my-8 bg-ivory/20" />
+
+        {/* Bottom Footer */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-ivory/60 text-sm">
+            © {new Date().getFullYear()} Whimsy Films. All rights reserved.
+          </div>
+          
+          <div className="flex gap-6 text-sm">
+            {legalLinks.map((link) => (
+              <Link 
+                key={link.href}
+                to={link.href}
+                className="text-ivory/60 hover:text-ivory transition-colors duration-200"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Partner Logos Placeholder */}
+        <div className="mt-8 pt-8 border-t border-ivory/20">
+          <div className="text-center text-ivory/60 text-sm">
+            Proud to collaborate with governments, NGOs, cultural organizations, and educational institutions worldwide
           </div>
         </div>
       </div>

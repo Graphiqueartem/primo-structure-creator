@@ -58,17 +58,33 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Whimsy Custom Colors
+        forest: {
+          deep: "hsl(var(--forest-deep))",
+          light: "hsl(var(--forest-light))",
+        },
+        gold: {
+          warm: "hsl(var(--gold-warm))",
+          light: "hsl(var(--gold-light))",
+        },
+        indigo: {
+          deep: "hsl(var(--indigo-deep))",
+          light: "hsl(var(--indigo-light))",
+        },
+        ivory: "hsl(var(--ivory))",
       },
       backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-subtle': 'var(--gradient-subtle)',
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-warm": "var(--gradient-warm)",
+        "gradient-forest": "var(--gradient-forest)",
       },
       boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
-        'soft': 'var(--shadow-soft)',
+        "magical": "var(--shadow-magical)",
+        "warm": "var(--shadow-warm)",
+        "soft": "var(--shadow-soft)",
       },
       transitionTimingFunction: {
-        'smooth': 'var(--transition-smooth)',
+        "bounce-gentle": "var(--bounce-gentle)",
       },
       borderRadius: {
         lg: "var(--radius)",
