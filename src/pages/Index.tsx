@@ -1,128 +1,196 @@
 import HeroSection from "@/components/home/HeroSection";
+import { PageHeader } from "@/components/layout/PageHeader";
+import { ContentBlock } from "@/components/layout/ContentBlock";
+import { StatsSection } from "@/components/layout/StatsSection";
+import { QuoteSection } from "@/components/layout/QuoteSection";
 import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { 
+  Film, 
+  Globe, 
+  Leaf, 
+  Users, 
+  Camera, 
+  BookOpen, 
+  Heart,
+  Target
+} from "lucide-react";
 
 const Index = () => {
+  const stats = [
+    {
+      icon: <Globe className="h-8 w-8" />,
+      number: "50+",
+      label: "Cultures",
+      description: "Stories from across the globe"
+    },
+    {
+      icon: <Film className="h-8 w-8" />,
+      number: "25+",
+      label: "Productions",
+      description: "Films and series in development"
+    },
+    {
+      icon: <Users className="h-8 w-8" />,
+      number: "100K+",
+      label: "Children",
+      description: "Reached through our content"
+    },
+    {
+      icon: <Leaf className="h-8 w-8" />,
+      number: "15",
+      label: "Species",
+      description: "Featured in conservation stories"
+    }
+  ];
+
   return (
     <>
       <HeroSection />
       
+      {/* Stats Section */}
+      <StatsSection 
+        title="Our Global Impact"
+        subtitle="Creating meaningful connections through storytelling and conservation"
+        stats={stats}
+      />
+
       {/* Features Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-forest-deep mb-4">Our Creative Focus</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Bringing together folklore, wildlife, and storytelling through innovative media production
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Cultural Heritage</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Authentic folklore from around the world</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Wildlife Stories</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Conservation through storytelling</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Creative Production</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Puppetry, AI, and live action</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Global Impact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Educational content for children</p>
-              </CardContent>
-            </Card>
-          </div>
+      <ContentBlock 
+        title="Our Creative Focus"
+        variant="minimal"
+        className="bg-background"
+      >
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 text-center">
+          Bringing together folklore, wildlife, and storytelling through innovative media production
+        </p>
+        <div className="grid md:grid-cols-4 gap-6">
+          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <BookOpen className="h-8 w-8" />
+              </div>
+              <CardTitle className="text-lg">Cultural Heritage</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">Authentic folklore from around the world</p>
+            </CardContent>
+          </Card>
+          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Heart className="h-8 w-8" />
+              </div>
+              <CardTitle className="text-lg">Wildlife Stories</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">Conservation through storytelling</p>
+            </CardContent>
+          </Card>
+          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Camera className="h-8 w-8" />
+              </div>
+              <CardTitle className="text-lg">Creative Production</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">Puppetry, AI, and live action</p>
+            </CardContent>
+          </Card>
+          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Target className="h-8 w-8" />
+              </div>
+              <CardTitle className="text-lg">Global Impact</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">Educational content for children</p>
+            </CardContent>
+          </Card>
         </div>
-      </section>
+      </ContentBlock>
 
       {/* Media Showcase */}
-      <section className="py-16 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Creative Vision</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We create magical content that brings folklore and wildlife together, 
-                inspiring children to connect with nature and cultural heritage.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <ImagePlaceholder />
-                <VideoPlaceholder />
-              </div>
-            </div>
-            <div className="space-y-4">
+      <ContentBlock 
+        title="Our Creative Vision"
+        variant="outlined"
+        className="bg-forest-light/10"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-lg text-muted-foreground mb-8">
+              We create magical content that brings folklore and wildlife together, 
+              inspiring children to connect with nature and cultural heritage.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
               <ImagePlaceholder />
-              <div className="grid grid-cols-2 gap-4">
-                <VideoPlaceholder />
-                <ImagePlaceholder />
-              </div>
+              <VideoPlaceholder />
+            </div>
+          </div>
+          <div className="space-y-4">
+            <ImagePlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <VideoPlaceholder />
+              <ImagePlaceholder />
             </div>
           </div>
         </div>
-      </section>
+      </ContentBlock>
+
+      {/* Quote Section */}
+      <QuoteSection 
+        quote="Every story we tell plants a seed of wonder that grows into lifelong conservation."
+        author="Whimsy Films"
+        role="Our Mission Statement"
+      />
 
       {/* Mission Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4">
+      <ContentBlock 
+        title="Our Mission"
+        variant="default"
+        className="bg-background"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-4">
+            <VideoPlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <ImagePlaceholder />
               <VideoPlaceholder />
-              <div className="grid grid-cols-2 gap-4">
-                <ImagePlaceholder />
-                <VideoPlaceholder />
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-forest-deep mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Through the power of storytelling, we aim to preserve cultural heritage 
-                while fostering a deep connection between children and the natural world.
-              </p>
-              <Button variant="default" size="lg" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
             </div>
           </div>
+          <div>
+            <p className="text-lg text-muted-foreground mb-8">
+              Through the power of storytelling, we aim to preserve cultural heritage 
+              while fostering a deep connection between children and the natural world.
+            </p>
+            <Button variant="default" size="lg" asChild>
+              <Link to="/about">Learn More About Us</Link>
+            </Button>
+          </div>
         </div>
-      </section>
+      </ContentBlock>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-warm text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-forest-deep mb-4">Join Our Story</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/get-involved">Get Involved</Link>
-            </Button>
-          </div>
+      <ContentBlock 
+        title="Join Our Story"
+        variant="gradient"
+      >
+        <p className="text-lg text-forest-deep/80 mb-8 max-w-2xl mx-auto text-center">
+          Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="default" size="lg" asChild>
+            <Link to="/partnerships">Partner With Us</Link>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <Link to="/get-involved">Get Involved</Link>
+          </Button>
         </div>
-      </section>
+      </ContentBlock>
     </>
   );
 };
