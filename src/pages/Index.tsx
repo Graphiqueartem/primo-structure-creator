@@ -46,7 +46,7 @@ const Index = () => {
               Stories connect us. Culture inspires us. Together we protect our planet.
             </h2>
             <div className="text-lg text-white/80 mb-8">
-              <p>
+              <p className="font-semibold">
                 Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
               </p>
             </div>
