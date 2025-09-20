@@ -98,30 +98,41 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-background pt-14">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            News & Insights
-          </h1>
-          <p className="text-xl text-ivory/90 max-w-3xl mx-auto mb-8">
-            Stay updated on our latest productions, partnerships, and impact stories. 
-            Discover thought leadership on culture, conservation, and the power of storytelling.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button variant="warm" size="lg" asChild>
-              <Link to="#featured">Read Latest Stories</Link>
-            </Button>
-            <Button variant="magical" size="lg" asChild>
-              <Link to="#newsletter">Subscribe to Updates</Link>
-            </Button>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <ImagePlaceholder />
-            <ImagePlaceholder />
-            <ImagePlaceholder />
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
+            autoPlay 
+            muted 
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              News & Insights
+            </h1>
+            <div className="text-lg text-white/80 mb-8">
+              <p className="font-semibold">
+                Stay updated on our latest productions, partnerships, and impact stories. 
+                Discover thought leadership on culture, conservation, and the power of storytelling.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button variant="warm" size="lg" asChild>
+                <Link to="#featured">Read Latest Stories</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="#newsletter">Subscribe to Updates</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
