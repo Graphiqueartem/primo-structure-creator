@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-visible bg-gradient-hero pt-20 pb-10 sm:pt-24 sm:pb-12">
       
       <div className="relative z-10 container mx-auto px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
             Where Storytelling
             <span className="block text-gold-warm">Inspires Action</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-ivory/90 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-2xl text-ivory/90 leading-relaxed max-w-4xl mx-auto">
             Whimsy Films is a global production house bringing folklore, wildlife, and magical 
             storytelling to life — to inspire children, empower communities, and protect our natural world.
           </p>

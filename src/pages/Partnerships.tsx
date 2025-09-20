@@ -325,6 +325,7 @@ const Partnerships = () => {
                         variant={ctaIndex === 0 ? "default" : "outline"} 
                         size="lg" 
                         asChild
+                        className="w-full sm:w-auto whitespace-normal break-words text-center"
                       >
                         <Link to={cta.link}>{cta.text}</Link>
                       </Button>

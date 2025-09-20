@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { StandardPageLayout } from "@/components/layout/StandardPageLayout";
+import { ContentBlock } from "@/components/layout/ContentBlock";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { 
   Mail, 
   Phone, 
@@ -88,11 +90,17 @@ const Contact = () => {
   };
 
   return (
-    <StandardPageLayout
-      featuredBlocks={featuredBlocks}
-      contentSections={contentSections}
-      heroSection={heroSection}
-    />
+    <>
+      <StandardPageLayout
+        featuredBlocks={featuredBlocks}
+        contentSections={contentSections}
+        heroSection={heroSection}
+      />
+
+      <ContentBlock title="Contact Us" variant="outlined" className="bg-background">
+        <ContactForm />
+      </ContentBlock>
+    </>
   );
 };
 
