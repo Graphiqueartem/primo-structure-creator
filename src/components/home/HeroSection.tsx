@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroMain from "@/assets/hero-main.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${heroMain})`
-        }}
-      />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       
       <div className="relative z-10 container mx-auto px-6 lg:px-8 text-center text-white">
         <div className="max-w-5xl mx-auto space-y-8">

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Film, 
   Globe, 
@@ -12,7 +13,6 @@ import {
   Sparkles,
   Leaf
 } from "lucide-react";
-import culturalPuppetryImage from "@/assets/cultural-puppetry.jpg";
 
 const About = () => {
   const pillars = [
@@ -60,45 +60,20 @@ const About = () => {
         </div>
       </section>
 
-      {/* Wildlife Videos Section */}
-      <section className="py-2 bg-background">
-        <div className="container mx-auto px-2">
+      {/* Media Showcase */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold text-forest-deep mb-2 text-center">Our Team's Inspiration</h3>
-            <div className="grid md:grid-cols-3 gap-2">
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
-                />
-                <p className="text-xs text-muted-foreground">Wildlife Focus</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
-                />
-                <p className="text-xs text-muted-foreground">Global Stories</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
-                />
-                <p className="text-xs text-muted-foreground">Behind the Scenes</p>
-              </div>
+            <h3 className="text-2xl font-semibold text-forest-deep mb-6 text-center">Our Creative Process</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              <ImagePlaceholder />
+              <ImagePlaceholder />
+              <ImagePlaceholder />
             </div>
           </div>
         </div>
@@ -147,28 +122,18 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-4 lg:space-y-6">
-              <div className="rounded-lg lg:rounded-2xl overflow-hidden shadow-magical">
-                <img 
-                  src={culturalPuppetryImage}
-                  alt="Cultural puppetry workshop showcasing diverse folklore traditions"
-                  className="w-full h-auto"
-                />
-              </div>
-              
-              <Card className="bg-gradient-warm border-0">
-                <CardContent className="p-4 sm:p-6 lg:p-8">
-                  <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-3 lg:mb-4">
-                    Our Vision in Action
-                  </h3>
-                  <p className="text-forest-deep/80 text-sm sm:text-base">
-                    From Africa to Asia, from Europe to the Americas, we bring magical stories 
-                    to life through puppetry, wildlife cinematography, and cultural authenticity — 
-                    inviting the world to join us in protecting nature and celebrating heritage.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="bg-gradient-warm border-0">
+              <CardContent className="p-6 lg:p-8">
+                <h3 className="text-xl font-semibold text-forest-deep mb-4">
+                  Our Vision in Action
+                </h3>
+                <p className="text-forest-deep/80 text-base mb-6">
+                  From Africa to Asia, from Europe to the Americas, we bring magical stories 
+                  to life through puppetry, wildlife cinematography, and cultural authenticity — 
+                  inviting the world to join us in protecting nature and celebrating heritage.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

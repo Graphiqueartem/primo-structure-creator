@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Building, 
   Heart, 
@@ -194,45 +195,19 @@ const Partnerships = () => {
         </div>
       </section>
 
-      {/* Wildlife Videos Section */}
-      <section className="py-4 bg-background">
-        <div className="container mx-auto px-2">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Global Partnership Stories</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Wildlife Conservation</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Cultural Landscapes</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">International Projects</p>
-              </div>
+            <h3 className="text-2xl font-semibold text-forest-deep mb-8 text-center">Global Partnership Stories</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              <ImagePlaceholder />
+              <ImagePlaceholder />
+              <ImagePlaceholder />
             </div>
           </div>
         </div>

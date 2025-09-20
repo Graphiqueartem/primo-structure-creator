@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Mail, 
   Phone, 
@@ -23,11 +24,6 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// Cultural storytelling images
-import culturalStory5 from "@/assets/cultural-storytelling-5.jpg";
-import culturalStory6 from "@/assets/cultural-storytelling-6.jpg";
-import culturalStory7 from "@/assets/cultural-storytelling-7.jpg";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,13 +38,11 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. We'll get back to you within 24 hours.",
     });
     
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -114,80 +108,55 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-6 bg-gradient-hero text-white">
-        <div className="container mx-auto px-2 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
+      <section className="py-16 bg-gradient-hero text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Let's Create Magic Together
           </h1>
-          <p className="text-base text-ivory/90 max-w-2xl mx-auto mb-4">
+          <p className="text-xl text-ivory/90 max-w-3xl mx-auto mb-8">
             Every great partnership begins with a conversation. Whether you represent 
             a government, NGO, cultural organization, or are simply passionate about 
             our mission — we'd love to hear from you.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <Button variant="warm" size="default" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button variant="warm" size="lg" asChild>
               <a href="#contact-form">Send Us a Message</a>
             </Button>
-            <Button variant="magical" size="default" asChild>
+            <Button variant="magical" size="lg" asChild>
               <a href="#partnership-info">Explore Partnerships</a>
             </Button>
           </div>
           
-          {/* Cultural Images Row */}
-          <div className="grid grid-cols-3 gap-2 mt-4 max-w-lg mx-auto">
-            <img src={culturalStory5} alt="Celtic storytelling tradition" className="w-full h-16 object-cover rounded-lg" />
-            <img src={culturalStory6} alt="Chinese opera performance" className="w-full h-16 object-cover rounded-lg" />
-            <img src={culturalStory7} alt="Indian classical dance" className="w-full h-16 object-cover rounded-lg" />
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <ImagePlaceholder />
+            <ImagePlaceholder />
+            <ImagePlaceholder />
+          </div>
+        </div>
+      </section>
+
+      {/* Media Showcase */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold text-forest-deep mb-8 text-center">
+              Connect With Our Mission
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Methods */}
-      <section className="py-6 bg-background">
-        <div className="container mx-auto px-2">
-          {/* Wildlife Videos Section */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Connect With Our Mission</h3>
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Wildlife Conservation</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Cultural Heritage</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Collaboration</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-forest-deep mb-4">
+      <section className="py-16 bg-forest-light/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-forest-deep mb-6">
               Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -196,20 +165,20 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {contactMethods.map((method, index) => (
               <Card key={index} className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="text-primary mb-3 flex justify-center">
+                <CardContent className="p-8">
+                  <div className="text-primary mb-4 flex justify-center">
                     {method.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-forest-deep mb-2">
+                  <h3 className="text-xl font-semibold text-forest-deep mb-3">
                     {method.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
+                  <p className="text-muted-foreground mb-4">
                     {method.description}
                   </p>
-                  <p className="font-medium text-forest-deep mb-3">
+                  <p className="font-medium text-forest-deep mb-4">
                     {method.contact}
                   </p>
                   <Button variant="outline" size="sm">
@@ -220,29 +189,28 @@ const Contact = () => {
             ))}
           </div>
 
-          {/* Office Hours */}
-          <Card className="bg-gradient-warm border-0 max-w-xl mx-auto">
-            <CardContent className="p-6 text-center">
-              <Clock className="h-10 w-10 text-forest-deep mx-auto mb-3" />
-              <h3 className="text-xl font-semibold text-forest-deep mb-3">
+          <Card className="bg-gradient-warm border-0 max-w-2xl mx-auto">
+            <CardContent className="p-8 text-center">
+              <Clock className="h-12 w-12 text-forest-deep mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold text-forest-deep mb-6">
                 Response Times & Availability
               </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-left">
+              <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div>
-                  <h4 className="font-semibold text-forest-deep mb-1">Email Response</h4>
-                  <p className="text-forest-deep/80 text-xs">Within 24 hours on business days</p>
+                  <h4 className="font-semibold text-forest-deep mb-2">Email Response</h4>
+                  <p className="text-forest-deep/80">Within 24 hours on business days</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest-deep mb-1">Meeting Scheduling</h4>
-                  <p className="text-forest-deep/80 text-xs">Available Monday-Friday, UK time</p>
+                  <h4 className="font-semibold text-forest-deep mb-2">Meeting Scheduling</h4>
+                  <p className="text-forest-deep/80">Available Monday-Friday, UK time</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest-deep mb-1">Urgent Inquiries</h4>
-                  <p className="text-forest-deep/80 text-xs">Mark as urgent in subject line</p>
+                  <h4 className="font-semibold text-forest-deep mb-2">Urgent Inquiries</h4>
+                  <p className="text-forest-deep/80">Mark as urgent in subject line</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest-deep mb-1">Partnership Discussions</h4>
-                  <p className="text-forest-deep/80 text-xs">Comprehensive response within 48 hours</p>
+                  <h4 className="font-semibold text-forest-deep mb-2">Partnership Discussions</h4>
+                  <p className="text-forest-deep/80">Comprehensive response within 48 hours</p>
                 </div>
               </div>
             </CardContent>
@@ -251,11 +219,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-6 bg-forest-light/20">
-        <div className="container mx-auto px-2">
+      <section id="contact-form" className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-forest-deep mb-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-forest-deep mb-6">
                 Send Us a Message
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -380,10 +348,10 @@ const Contact = () => {
       </section>
 
       {/* Partnership Information */}
-      <section id="partnership-info" className="py-20 bg-background">
+      <section id="partnership-info" className="py-16 bg-forest-light/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-forest-deep mb-6">
               Partnership Opportunities
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -392,7 +360,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {partnershipTypes.slice(0, 5).map((type, index) => (
               <Card key={index} className="text-center hover:shadow-soft transition-all duration-300">
                 <CardContent className="p-8">
@@ -427,106 +395,6 @@ const Contact = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-forest-deep mb-12 text-center">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-forest-deep">
-                    How long does it take to develop a partnership?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Partnership timelines vary depending on scope and complexity. Initial conversations 
-                    typically lead to formal proposals within 2-4 weeks. Full partnership development 
-                    can range from 2-6 months depending on the project scale.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-forest-deep">
-                    What types of organizations do you work with?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We collaborate with governments, NGOs, cultural institutions, educational 
-                    organizations, media companies, and individual supporters. Our partnerships 
-                    are designed to align with our mission of cultural preservation and conservation.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-forest-deep">
-                    Do you offer consulting services?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Yes, we provide consulting on cultural storytelling, conservation messaging, 
-                    and folklore adaptation. We also offer workshops on puppetry, wildlife 
-                    cinematography, and cross-cultural collaboration.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg text-forest-deep">
-                    How do you ensure cultural authenticity?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We work directly with cultural consultants, community leaders, and traditional 
-                    storytellers from source communities. Every adaptation involves extensive 
-                    collaboration to ensure respectful and accurate representation.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-forest-deep text-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Begin Our Conversation?
-            </h2>
-            <p className="text-xl text-ivory/90 mb-12">
-              Every partnership starts with a single message. Share your vision with us, 
-              and let's explore how storytelling can amplify your mission and create lasting impact.
-            </p>
-            
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Button variant="warm" size="xl" asChild>
-                <a href="#contact-form">Send Your Message</a>
-              </Button>
-              <Button variant="magical" size="xl" asChild>
-                <a href="mailto:hello@whimsyfilms.com">Email Us Directly</a>
-              </Button>
-              <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
-                <a href="/partnerships">Explore Partnership Types</a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

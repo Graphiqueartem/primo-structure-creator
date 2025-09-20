@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Heart, 
   Users, 
@@ -19,11 +20,6 @@ import {
   Mail,
   MessageCircle
 } from "lucide-react";
-
-// Cultural storytelling images
-import culturalStory1 from "@/assets/cultural-storytelling-1.jpg";
-import culturalStory2 from "@/assets/cultural-storytelling-2.jpg";
-import culturalStory8 from "@/assets/cultural-storytelling-8.jpg";
 
 const GetInvolved = () => {
   const involvementTypes = [
@@ -103,90 +99,65 @@ const GetInvolved = () => {
   return (
     <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-6 bg-gradient-hero text-white">
-        <div className="container mx-auto px-2 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
+      <section className="py-16 bg-gradient-hero text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Be Part of the Magic
           </h1>
-          <p className="text-base text-ivory/90 max-w-2xl mx-auto mb-4">
+          <p className="text-xl text-ivory/90 max-w-3xl mx-auto mb-8">
             Whimsy Films is building a global movement of storytellers, conservationists, 
             educators, and dreamers. You don't just watch our films — you help create them.
           </p>
           
-          <div className="bg-ivory/10 border border-ivory/20 rounded-lg p-4 max-w-xl mx-auto mb-4">
-            <p className="text-base font-serif italic text-gold-warm">
+          <div className="bg-ivory/10 border border-ivory/20 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+            <p className="text-lg font-serif italic text-gold-warm">
               "This is more than film. More than folklore. More than puppetry. 
               This is a movement. A global journey where culture and creativity 
               unite to protect nature and inspire young minds. Will you join us?"
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
-            <Button variant="warm" size="default" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button variant="warm" size="lg" asChild>
               <Link to="#organizations">Partner With Us</Link>
             </Button>
-            <Button variant="magical" size="default" asChild>
+            <Button variant="magical" size="lg" asChild>
               <Link to="#individuals">Join the Movement</Link>
             </Button>
-            <Button variant="outline" size="default" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+            <Button variant="outline" size="lg" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
               <Link to="#newsletter">Stay Connected</Link>
             </Button>
           </div>
           
-          {/* Cultural Images Row */}
-          <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
-            <img src={culturalStory1} alt="Traditional puppet theater" className="w-full h-16 object-cover rounded-lg" />
-            <img src={culturalStory2} alt="Shadow puppetry performance" className="w-full h-16 object-cover rounded-lg" />
-            <img src={culturalStory8} alt="Scandinavian folk traditions" className="w-full h-16 object-cover rounded-lg" />
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <ImagePlaceholder />
+            <ImagePlaceholder />
+            <ImagePlaceholder />
+          </div>
+        </div>
+      </section>
+
+      {/* Media Showcase */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold text-forest-deep mb-8 text-center">
+              Join Our Global Movement
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+              <VideoPlaceholder />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Organizations & Institutions */}
-      <section id="organizations" className="py-6 bg-background">
-        <div className="container mx-auto px-2">
-          {/* Wildlife Videos Section */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Join Our Global Movement</h3>
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Nature's Call</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Global Traditions</p>
-              </div>
-              <div className="text-center">
-                <video 
-                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
-                  autoPlay 
-                  muted 
-                  loop
-                  playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
-                />
-                <p className="text-sm text-muted-foreground">Community Action</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-forest-deep mb-4">
+      <section id="organizations" className="py-16 bg-forest-light/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-forest-deep mb-6">
               Organizations & Institutions
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -195,7 +166,7 @@ const GetInvolved = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {involvementTypes.map((type, index) => (
               <Card key={index} className="hover:shadow-magical transition-all duration-300 transform hover:scale-105 border-forest-light/30">
                 <CardHeader>
@@ -206,12 +177,12 @@ const GetInvolved = () => {
                     {type.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center space-y-3">
-                  <p className="text-muted-foreground text-sm">
+                <CardContent className="text-center space-y-4">
+                  <p className="text-muted-foreground">
                     {type.description}
                   </p>
                   
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     {type.benefits.map((benefit, benefitIndex) => (
                       <Badge key={benefitIndex} variant="secondary" className="text-xs mr-1 mb-1">
                         {benefit}
@@ -227,7 +198,7 @@ const GetInvolved = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center">
             <Card className="bg-gradient-warm border-0 max-w-2xl mx-auto">
               <CardContent className="p-8">
                 <MessageCircle className="h-12 w-12 text-forest-deep mx-auto mb-4" />
@@ -249,10 +220,10 @@ const GetInvolved = () => {
       </section>
 
       {/* Individual Involvement */}
-      <section id="individuals" className="py-20 bg-forest-light/20">
+      <section id="individuals" className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-forest-deep mb-6">
               Individual Changemakers
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -308,7 +279,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Newsletter & Updates */}
-      <section id="newsletter" className="py-20 bg-forest-deep text-white">
+      <section id="newsletter" className="py-16 bg-forest-deep text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Mail className="h-16 w-16 text-gold-warm mx-auto mb-6" />
@@ -366,7 +337,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-warm">
+      <section className="py-16 bg-gradient-warm">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-forest-deep mb-6">
@@ -396,10 +367,10 @@ const GetInvolved = () => {
                   <Users className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold text-forest-deep mb-2">For Individuals</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Join our community of global changemakers and storytellers
+                    Join our community of changemakers and cultural advocates
                   </p>
                   <Button variant="default" size="sm" asChild>
-                    <Link to="/contact">Get Involved Today</Link>
+                    <Link to="/contact">Get Involved</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -407,27 +378,23 @@ const GetInvolved = () => {
               <Card className="text-center hover:shadow-soft transition-all duration-300">
                 <CardContent className="p-6">
                   <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold text-forest-deep mb-2">Stay Updated</h3>
+                  <h3 className="font-semibold text-forest-deep mb-2">For Everyone</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Follow our journey and be first to know about new opportunities
+                    Follow our journey and stay connected with our mission
                   </p>
                   <Button variant="default" size="sm" asChild>
-                    <Link to="#newsletter">Join Newsletter</Link>
+                    <Link to="/contact">Stay Connected</Link>
                   </Button>
                 </CardContent>
               </Card>
             </div>
-
-            <div className="bg-forest-deep text-white rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold mb-4">
-                Ready to Make Magic Together?
-              </h3>
-              <p className="text-ivory/80 mb-6">
-                Every great story begins with someone believing change is possible. 
-                Let's write the next chapter together.
-              </p>
-              <Button variant="warm" size="lg" asChild>
-                <Link to="/contact">Start Your Journey</Link>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="default" size="xl" asChild>
+                <Link to="/partnerships">Start a Partnership</Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/contact">Contact Us Today</Link>
               </Button>
             </div>
           </div>
