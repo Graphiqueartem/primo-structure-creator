@@ -1,4 +1,3 @@
-import HeroSection from "@/components/home/HeroSection";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
 import { StatsSection } from "@/components/layout/StatsSection";
@@ -15,180 +14,268 @@ import {
   Camera, 
   BookOpen, 
   Heart,
-  Target
+  Target,
+  Play
 } from "lucide-react";
 
 const Index = () => {
-  const stats = [
-    {
-      icon: <Globe className="h-8 w-8" />,
-      number: "50+",
-      label: "Cultures",
-      description: "Stories from across the globe"
-    },
-    {
-      icon: <Film className="h-8 w-8" />,
-      number: "25+",
-      label: "Productions",
-      description: "Films and series in development"
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      number: "100K+",
-      label: "Children",
-      description: "Reached through our content"
-    },
-    {
-      icon: <Leaf className="h-8 w-8" />,
-      number: "15",
-      label: "Species",
-      description: "Featured in conservation stories"
-    }
-  ];
-
   return (
     <>
-      <HeroSection />
-      
-      {/* Stats Section */}
-      <StatsSection 
-        title="Our Global Impact"
-        subtitle="Creating meaningful connections through storytelling and conservation"
-        stats={stats}
+      {/* Hero Section */}
+      <PageHeader
+        title="Where Storytelling Inspires Action"
+        subtitle="Stories connect us. Culture inspires us. Together we protect our planet."
+        description={
+          <div className="space-y-4">
+            <p>
+              Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
+            </p>
+          </div>
+        }
+        actions={
+          <>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/partnerships">Partner With Us</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/vision">Discover Our Vision</Link>
+            </Button>
+          </>
+        }
+        decorativeElements={
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="relative overflow-hidden rounded-lg">
+              <VideoPlaceholder />
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <Play className="h-12 w-12 text-white" />
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <VideoPlaceholder />
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <Play className="h-12 w-12 text-white" />
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <VideoPlaceholder />
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <Play className="h-12 w-12 text-white" />
+              </div>
+            </div>
+          </div>
+        }
+        backgroundClass="bg-gradient-hero text-white"
       />
 
-      {/* Features Section */}
+      {/* Inspirational Quote Divider */}
+      <QuoteSection 
+        quote="Every tradition is a story. Every story is a bridge to the future."
+        author=""
+        role=""
+        backgroundClass="bg-background"
+      />
+
+      {/* Expanded Intro Section */}
       <ContentBlock 
-        title="Our Creative Focus"
+        title=""
         variant="minimal"
-        className="bg-background"
+        className="bg-forest-light/5"
       >
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-8 text-center">
-          Bringing together folklore, wildlife, and storytelling through innovative media production
-        </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-              <CardHeader className="pb-2 md:pb-3">
-                <div className="mx-auto mb-2 md:mb-3 text-primary">
-                  <BookOpen className="h-6 w-6 md:h-8 md:w-8" />
-                </div>
-                <CardTitle className="text-base md:text-lg">Cultural Heritage</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 pb-3 md:pb-4">
-                <p className="text-xs md:text-sm text-muted-foreground">Authentic folklore from around the world</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-              <CardHeader className="pb-2 md:pb-3">
-                <div className="mx-auto mb-2 md:mb-3 text-primary">
-                  <Heart className="h-6 w-6 md:h-8 md:w-8" />
-                </div>
-                <CardTitle className="text-base md:text-lg">Wildlife Stories</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 pb-3 md:pb-4">
-                <p className="text-xs md:text-sm text-muted-foreground">Conservation through storytelling</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-              <CardHeader className="pb-2 md:pb-3">
-                <div className="mx-auto mb-2 md:mb-3 text-primary">
-                  <Camera className="h-6 w-6 md:h-8 md:w-8" />
-                </div>
-                <CardTitle className="text-base md:text-lg">Creative Production</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 pb-3 md:pb-4">
-                <p className="text-xs md:text-sm text-muted-foreground">Puppetry, AI, and live action</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-              <CardHeader className="pb-2 md:pb-3">
-                <div className="mx-auto mb-2 md:mb-3 text-primary">
-                  <Target className="h-6 w-6 md:h-8 md:w-8" />
-                </div>
-                <CardTitle className="text-base md:text-lg">Global Impact</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 pb-3 md:pb-4">
-                <p className="text-xs md:text-sm text-muted-foreground">Educational content for children</p>
-              </CardContent>
-            </Card>
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/partnerships">Explore Partnerships</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/get-involved">Register Your Interest</Link>
+              </Button>
+            </div>
           </div>
+          <div className="space-y-4">
+            <ImagePlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <VideoPlaceholder />
+              <ImagePlaceholder />
+            </div>
+          </div>
+        </div>
       </ContentBlock>
 
-      {/* Media Showcase */}
+      {/* Stories That Change the World */}
       <ContentBlock 
-        title="Our Creative Vision"
+        title="Stories That Change the World"
         variant="outlined"
+        className="bg-background"
+      >
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <VideoPlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <ImagePlaceholder />
+              <VideoPlaceholder />
+            </div>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.
+            </p>
+            <p className="text-lg font-semibold text-primary">
+              We tell magical stories that protect nature and inspire generations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/productions">Watch Our Films</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/partnerships">Partner With Us</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="/get-involved">Join the Journey</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </ContentBlock>
+
+      {/* Production Highlights */}
+      <ContentBlock 
+        title="Our Creative Excellence"
+        variant="minimal"
         className="bg-forest-light/10"
       >
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
-          <div>
-            <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-5">
-              We create magical content that brings folklore and wildlife together, 
-              inspiring children to connect with nature and cultural heritage.
-            </p>
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <ImagePlaceholder />
-              <VideoPlaceholder />
-            </div>
-          </div>
-          <div className="space-y-3 md:space-y-4">
-            <ImagePlaceholder />
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <VideoPlaceholder />
-              <ImagePlaceholder />
-            </div>
-          </div>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 text-center">
+          Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike. From Africa to Asia, from Europe to the Americas, we bring magical stories to life — and invite the world to join us.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="text-center hover:shadow-magical transition-all duration-300">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Camera className="h-12 w-12" />
+              </div>
+              <CardTitle className="text-lg">Wildlife Cinematography</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Capturing the raw wonder of the natural world.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center hover:shadow-magical transition-all duration-300">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Heart className="h-12 w-12" />
+              </div>
+              <CardTitle className="text-lg">Puppetry & Practical Artistry</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Timeless, tactile, beloved by children.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center hover:shadow-magical transition-all duration-300">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Users className="h-12 w-12" />
+              </div>
+              <CardTitle className="text-lg">Live Action & Human Performance</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Authentic, emotional, deeply relatable.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center hover:shadow-magical transition-all duration-300">
+            <CardHeader>
+              <div className="mx-auto mb-4 text-primary">
+                <Target className="h-12 w-12" />
+              </div>
+              <CardTitle className="text-lg">AI-enhanced Visuals & Innovation</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Expanding creative possibilities.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </ContentBlock>
 
-      {/* Quote Section */}
-      <QuoteSection 
-        quote="Every story we tell plants a seed of wonder that grows into lifelong conservation."
-        author="Whimsy Films"
-        role="Our Mission Statement"
-      />
-
-      {/* Mission Section */}
+      {/* Why Whimsy Films Matters */}
       <ContentBlock 
-        title="Our Mission"
-        variant="default"
-        className="bg-background"
-      >
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
-          <div className="space-y-3 md:space-y-4">
-            <VideoPlaceholder />
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <ImagePlaceholder />
-              <VideoPlaceholder />
-            </div>
-          </div>
-          <div>
-            <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-5">
-              Through the power of storytelling, we aim to preserve cultural heritage 
-              while fostering a deep connection between children and the natural world.
-            </p>
-            <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
-              <Link to="/about">Learn More About Us</Link>
-            </Button>
-          </div>
-        </div>
-      </ContentBlock>
-
-      {/* Call to Action */}
-      <ContentBlock 
-        title="Join Our Story"
+        title="Why Whimsy Films Matters"
         variant="gradient"
       >
-        <p className="text-base md:text-lg text-forest-deep/80 mb-4 md:mb-5 max-w-2xl mx-auto text-center">
-          Be part of a movement that celebrates culture, protects wildlife, and inspires the next generation.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-          <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
-            <Link to="/partnerships">Partner With Us</Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-            <Link to="/get-involved">Get Involved</Link>
-          </Button>
+        <div className="space-y-8">
+          <p className="text-lg text-forest-deep/80 max-w-4xl mx-auto text-center leading-relaxed">
+            We are not simply a film studio. We are building a global cultural platform where every production:
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <Card className="bg-white/50 border-forest-light/30">
+                <CardContent className="p-6">
+                  <p className="text-forest-deep/80">
+                    Acts as a soft power tool for governments to showcase their cultural heritage.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/50 border-forest-light/30">
+                <CardContent className="p-6">
+                  <p className="text-forest-deep/80">
+                    Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="space-y-6">
+              <Card className="bg-white/50 border-forest-light/30">
+                <CardContent className="p-6">
+                  <p className="text-forest-deep/80">
+                    Supports education systems, offering engaging, curriculum-linked cultural resources.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/50 border-forest-light/30">
+                <CardContent className="p-6">
+                  <p className="text-forest-deep/80">
+                    Creates new economic opportunities in creative industries, tourism, and cultural exchange.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-lg text-forest-deep/80 mb-6 font-semibold">
+              For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to partner in shaping the future of inclusive, impactful children's media.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/impact">Discover Our Impact</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/partnerships">Partner With Us</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </ContentBlock>
     </>

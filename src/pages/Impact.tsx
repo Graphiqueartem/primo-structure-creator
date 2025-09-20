@@ -49,14 +49,14 @@ const Impact = () => {
     <>
       <PageHeader
         badge="Our Impact"
-        title="Stories That Spark Real-World Change"
-        subtitle="Measurable Impact, Lasting Legacy"
+        title="Stories That Spark Real-World Change" 
         description={
           <div className="space-y-4">
             <p>
-              Every story we tell creates ripples of change. From protecting endangered species 
-              to preserving cultural heritage, our films don't just entertain—they inspire action, 
-              foster empathy, and build bridges between communities and conservation.
+              Every Whimsy Films project is designed with dual impact: to enchant audiences and to make a measurable difference in cultural preservation, wildlife conservation, and education.
+            </p>
+            <p>
+              Every nation has stories of animals, spirits, and heroes. These tales connect us to the earth. We transform them into cinematic experiences that children and families everywhere can treasure.
             </p>
           </div>
         }
@@ -70,7 +70,7 @@ const Impact = () => {
             </Button>
           </>
         }
-        backgroundClass="bg-forest-deep text-white"
+        backgroundClass="bg-gradient-hero text-white"
         decorativeElements={
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <ImagePlaceholder />
@@ -88,73 +88,43 @@ const Impact = () => {
         backgroundClass="bg-background"
       />
 
-      {/* Three Pillars of Impact */}
+      {/* Conservation Impact */}
       <ContentBlock 
-        title="Three Pillars of Global Impact"
-        variant="minimal"
-        className="bg-forest-light/5"
-      >
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105 bg-gradient-warm border-0">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-forest-deep">
-                <Leaf className="h-12 w-12" />
-              </div>
-              <CardTitle className="text-xl text-forest-deep">Conservation Impact</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-forest-deep/80">
-                Protecting Wildlife Through Storytelling - emotional connections lead to lifelong conservation advocacy.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-primary">
-                <Globe className="h-12 w-12" />
-              </div>
-              <CardTitle className="text-xl">Cultural Impact</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Preserving Heritage for Future Generations - authentic stories from diverse cultures worldwide.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-magical transition-all duration-300 hover:scale-105 bg-forest-light/20 border-forest-light/30">
-            <CardHeader>
-              <div className="mx-auto mb-4 text-forest-deep">
-                <GraduationCap className="h-12 w-12" />
-              </div>
-              <CardTitle className="text-xl text-forest-deep">Educational Impact</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-forest-deep/80">
-                Inspiring Global Citizens - curriculum-aligned content that builds empathy and environmental awareness.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </ContentBlock>
-
-      {/* Wildlife Protection */}
-      <ContentBlock 
-        title="Wildlife Protection Through Emotional Connection"
+        title="Conservation Impact"
         variant="outlined"
-        className="bg-background"
+        className="bg-forest-light/5"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We use film to protect what is disappearing. By weaving real wildlife into our folklore-inspired stories, 
-              children and families develop deep emotional connections with species and habitats.
+              We use film to protect what is disappearing. By weaving real wildlife into our folklore-inspired stories, children and families develop deep emotional connections with species and habitats.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              When children fall in love with characters inspired by real animals, they become lifelong advocates 
-              for conservation. Our films serve as both entertainment and conservation education tools.
-            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Leaf className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Emotional Connection:</strong> Children care about what they know. By featuring real animals and ecosystems, we foster empathy and long-term conservation values.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Global Awareness:</strong> Our films shine a light on endangered species and fragile habitats that rarely reach mainstream media.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Amplification for NGOs & Governments:</strong> By embedding conservation messages within stories, our films extend the reach of campaigns and policy initiatives.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Soft Power Tool:</strong> Wildlife narratives become a unifying diplomatic message — transcending language and borders.</span>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/partnerships">Partner With Us in Conservation</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/productions">Learn More About Our Wildlife Projects</Link>
+              </Button>
+            </div>
           </div>
           <div className="space-y-4">
             <ImagePlaceholder />
@@ -166,16 +136,9 @@ const Impact = () => {
         </div>
       </ContentBlock>
 
-      {/* Quote Section */}
-      <QuoteSection 
-        quote="Children who connect emotionally with animal characters become lifelong conservation advocates."
-        author="Child Psychology Research Institute"
-        role="Studies on Character-Driven Conservation Education"
-      />
-
-      {/* Four Pillars of Impact */}
+      {/* Cultural Impact */}
       <ContentBlock 
-        title="How We Create Lasting Change"
+        title="Cultural Impact"
         variant="gradient"
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -188,13 +151,130 @@ const Impact = () => {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-forest-deep/80 leading-relaxed">
-              Every Whimsy Films project is designed with dual impact: to enchant audiences 
-              and to make a measurable difference in cultural preservation, wildlife conservation, and education.
+              Folklore is humanity's oldest cultural currency. Yet many traditions are at risk of being forgotten.
             </p>
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
-              Our films create economic growth through local job creation, tourism promotion, and creative 
-              industry development while showcasing innovative storytelling techniques to global audiences.
+            <div className="space-y-4">
+              <div className="bg-white/20 p-4 rounded-lg">
+                <h4 className="font-semibold text-forest-deep mb-2">🌏 Representation</h4>
+                <p className="text-forest-deep/80">We showcase stories from diverse cultures with authenticity and respect.</p>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <h4 className="font-semibold text-forest-deep mb-2">🎭 Collaboration</h4>
+                <p className="text-forest-deep/80">Cultural organisations and artists become part of the creative process.</p>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <h4 className="font-semibold text-forest-deep mb-2">🏛️ Cultural Diplomacy</h4>
+                <p className="text-forest-deep/80">Governments can use co-productions as tools for building international cultural presence.</p>
+              </div>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <h4 className="font-semibold text-forest-deep mb-2">📚 Preservation</h4>
+                <p className="text-forest-deep/80">Our films act as modern archives of folklore — safeguarding heritage for future generations.</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/partnerships">Bring Your Culture's Stories to Life</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/partnerships">Explore Cultural Preservation Projects</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </ContentBlock>
+
+      {/* Education & Social Impact */}
+      <ContentBlock 
+        title="Education & Social Impact"
+        variant="outlined"
+        className="bg-background"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our films are crafted to do more than entertain — they support child development and inspire global citizenship.
             </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <BookOpen className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Curriculum Alignment:</strong> Partnered with educators to design content that supports literacy, empathy, and ecological learning.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Child-Centered Design:</strong> Stories empower children as heroes, encouraging self-expression and resilience.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Community Engagement:</strong> Schools, libraries, and NGOs can use our films in workshops, festivals, and learning programs.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground"><strong>Inclusive Narratives:</strong> Representation of diverse voices ensures children see themselves reflected in the stories they love.</span>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/partnerships">Collaborate on Education Projects</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/contact">Request Educational Resources</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <ImagePlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <VideoPlaceholder />
+              <ImagePlaceholder />
+            </div>
+          </div>
+        </div>
+      </ContentBlock>
+
+      {/* Economic Impact */}
+      <ContentBlock 
+        title="Economic & Partnership Impact"
+        variant="minimal"
+        className="bg-forest-light/10"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-4">
+            <VideoPlaceholder />
+            <div className="grid grid-cols-2 gap-4">
+              <ImagePlaceholder />
+              <VideoPlaceholder />
+            </div>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Whimsy Films generates value beyond the screen.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="p-4">
+                <h4 className="font-semibold text-forest-deep mb-2">💼 Economic Growth</h4>
+                <p className="text-sm text-muted-foreground">Film production supports local jobs, skills, and industries.</p>
+              </Card>
+              <Card className="p-4">
+                <h4 className="font-semibold text-forest-deep mb-2">🎥 Tourism & Promotion</h4>
+                <p className="text-sm text-muted-foreground">Stories rooted in real cultures and landscapes attract tourism interest.</p>
+              </Card>
+              <Card className="p-4">
+                <h4 className="font-semibold text-forest-deep mb-2">💡 Innovation Showcase</h4>
+                <p className="text-sm text-muted-foreground">As pioneers in blending puppetry, AI, and live wildlife, we position partners at the forefront of global creative innovation.</p>
+              </Card>
+              <Card className="p-4">
+                <h4 className="font-semibold text-forest-deep mb-2">🌍 Global Visibility</h4>
+                <p className="text-sm text-muted-foreground">Governments and institutions gain prestige by being associated with a studio redefining the cultural landscape.</p>
+              </Card>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/partnerships">Invest in Cultural & Economic Impact</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/partnerships">Join Our Partner Network</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </ContentBlock>

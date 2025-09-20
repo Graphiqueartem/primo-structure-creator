@@ -116,18 +116,16 @@ const Productions = () => {
         title="Where Folklore Meets the Screen"
         description={
           <p>
-            Whimsy Films' productions are unlike anything else in today's media landscape. 
-            We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals 
-            to create timeless stories that feel magical, tactile, and emotionally real.
+            Whimsy Films' productions are unlike anything else in today's media landscape. We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals to create timeless stories that feel magical, tactile, and emotionally real.
           </p>
         }
         actions={
           <>
             <Button variant="warm" size="lg" asChild>
-              <Link to="#approach">Explore Our Approach</Link>
+              <Link to="#our-approach">Explore Our Storytelling Approach</Link>
             </Button>
             <Button variant="magical" size="lg" asChild>
-              <Link to="#slate">Register for Updates</Link>
+              <Link to="#development-slate">Register for Updates</Link>
             </Button>
           </>
         }

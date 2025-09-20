@@ -49,20 +49,27 @@ const Vision = () => {
       <PageHeader
         badge="Our Vision"
         title="Reimagining Stories, Inspiring Change"
-        subtitle="Where Ancient Wisdom Meets Modern Conservation"
+        subtitle="Mission & Values"
         description={
           <div className="space-y-4">
             <p>
-              We envision a world where every child grows up with stories that celebrate their heritage 
-              while inspiring them to protect the natural world. Through folklore and wildlife storytelling, 
-              we're building bridges between cultures and creating tomorrow's conservation heroes.
+              At Whimsy Films, our mission is to create films that celebrate folklore, protect wildlife, and inspire children everywhere to imagine a more inclusive, compassionate, and sustainable world.
             </p>
+            <div className="space-y-3">
+              <div className="text-left">
+                <p><strong>Imagination:</strong> wonder is the seed of empathy and action.</p>
+                <p><strong>Respect:</strong> cultural and ecological authenticity.</p>
+                <p><strong>Innovation:</strong> technology without losing artistry.</p>
+                <p><strong>Collaboration:</strong> co-created with governments, NGOs, educators, and communities.</p>
+                <p><strong>Impact:</strong> every project contributes to cultural, social, and environmental good.</p>
+              </div>
+            </div>
           </div>
         }
         actions={
           <>
             <Button variant="warm" size="lg" asChild>
-              <Link to="/partnerships">Partner With Us</Link>
+              <Link to="/partnerships">Join Our Mission</Link>
             </Button>
             <Button variant="magical" size="lg" asChild>
               <Link to="/get-involved">Join the Movement</Link>
@@ -147,16 +154,11 @@ const Vision = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Stories are more than entertainment. They pass down cultural wisdom, shape 
-              childhood imagination, build empathy, and inspire societal change. Whimsy Films 
-              uses this power intentionally, turning folklore and wildlife storytelling into 
-              platforms for education, diplomacy, and conservation.
+              Stories are more than entertainment. They pass down cultural wisdom, shape childhood imagination, build empathy, and inspire societal change. Whimsy Films uses this power intentionally, turning folklore and wildlife storytelling into platforms for education, diplomacy, and conservation.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Folklore transcends borders, languages, and cultures. A story about a 
-              brave child protecting forest animals resonates universally, whether 
-              told in Nigeria, Japan, or Peru.
-            </p>
+            <Button variant="default" size="lg" asChild>
+              <Link to="/productions">Discover Our Approach</Link>
+            </Button>
           </div>
           <div className="space-y-4">
             <ImagePlaceholder />
@@ -191,14 +193,11 @@ const Vision = () => {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-forest-deep/80 leading-relaxed">
-              We envision a future where children everywhere grow up with stories representing their 
-              cultures, where families discover films that are entertaining yet enriching, and where 
-              governments and NGOs use our productions as cultural diplomacy tools.
+              We envision a future where children everywhere grow up with stories representing their cultures, where families discover films that are entertaining yet enriching, and where governments and NGOs use our productions as cultural diplomacy tools and awareness campaigns. Conservation efforts are amplified by stories that make the natural world unforgettable.
             </p>
-            <p className="text-lg text-forest-deep/80 leading-relaxed">
-              When children see themselves as heroes protecting wildlife, they develop 
-              deep emotional connections to conservation that last a lifetime.
-            </p>
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/partnerships">Be Part of This Future</Link>
+            </Button>
           </div>
         </div>
       </ContentBlock>

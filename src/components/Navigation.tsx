@@ -112,7 +112,7 @@ const Navigation = () => {
                       {item.title}
                       <ChevronDown className="h-3 w-3 flex-shrink-0" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56 bg-popover border-border shadow-lg z-50">
+                    <DropdownMenuContent className="w-56 bg-background border-border shadow-lg z-50 backdrop-blur-sm">
                       <DropdownMenuItem asChild>
                         <Link 
                           to={item.href}
