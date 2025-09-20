@@ -34,29 +34,27 @@ const Index = () => {
             playsInline
             className="w-full h-full object-cover"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        <div className="relative z-10 container mx-auto px-4 text-center text-black">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-black">
               Where Storytelling Inspires Action
             </h1>
-            <h2 className="text-xl md:text-2xl text-white/90 mb-4">
+            <h2 className="text-xl md:text-2xl text-black/90 mb-4">
               Stories connect us. Culture inspires us. Together we protect our planet.
             </h2>
-            <div className="text-lg text-white/80 mb-8">
+            <div className="text-lg text-black/80 mb-8">
               <p>
                 Whimsy Films is a global production house bringing folklore, wildlife, and magical storytelling to life — to inspire children, empower communities, and protect our natural world.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" className="bg-white text-forest-deep hover:bg-white/90" asChild>
+              <Button variant="default" size="lg" className="bg-forest-deep text-white hover:bg-forest-deep/90" asChild>
                 <Link to={getValidRoute("/partnerships")}>Partner With Us</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-forest-deep" asChild>
+              <Button variant="outline" size="lg" className="border-forest-deep text-forest-deep hover:bg-forest-deep hover:text-white" asChild>
                 <Link to={getValidRoute("/vision")}>Discover Our Vision</Link>
               </Button>
             </div>
