@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
-import { StatsSection } from "@/components/layout/StatsSection";
 import { QuoteSection } from "@/components/layout/QuoteSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -23,32 +22,6 @@ import {
 } from "lucide-react";
 
 const Partnerships = () => {
-  const partnershipStats = [
-    {
-      icon: <Building className="h-8 w-8" />,
-      number: "25+",
-      label: "Government Partners",
-      description: "Across 6 continents"
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      number: "50+",
-      label: "NGO Collaborators",
-      description: "Working for change"
-    },
-    {
-      icon: <Briefcase className="h-8 w-8" />,
-      number: "100+",
-      label: "Corporate Partners",
-      description: "Supporting our mission"
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      number: "∞",
-      label: "Individual Supporters",
-      description: "Every voice matters"
-    }
-  ];
 
   const partnerTypes = [
     {
@@ -245,13 +218,6 @@ const Partnerships = () => {
         </div>
       </section>
 
-      {/* Partnership Stats */}
-      <StatsSection 
-        title="Our Growing Partnership Network"
-        subtitle="Building bridges across sectors to amplify our global impact"
-        stats={partnershipStats}
-        backgroundClass="bg-background"
-      />
 
       {/* Media Showcase */}
       <ContentBlock 

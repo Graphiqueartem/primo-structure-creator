@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
-import { StatsSection } from "@/components/layout/StatsSection";
 import { QuoteSection } from "@/components/layout/QuoteSection";
 import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,32 +18,6 @@ import {
 } from "lucide-react";
 
 const GetInvolved = () => {
-  const volunteerStats = [
-    {
-      icon: <Users className="h-8 w-8" />,
-      number: "500+",
-      label: "Volunteers",
-      description: "From 45 countries worldwide"
-    },
-    {
-      icon: <HandHeart className="h-8 w-8" />,
-      number: "12",
-      label: "Programs",
-      description: "Ways to contribute your skills"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      number: "24/7",
-      label: "Global Community",
-      description: "Support and collaboration"
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      number: "∞",
-      label: "Impact",
-      description: "Every contribution matters"
-    }
-  ];
 
   const opportunityCards = [
     {
@@ -138,13 +111,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Community Stats */}
-      <StatsSection 
-        title="Join Our Global Community"
-        subtitle="Be part of a worldwide network making a difference through storytelling"
-        stats={volunteerStats}
-        backgroundClass="bg-background"
-      />
 
       {/* Opportunities */}
       <ContentBlock 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
-import { StatsSection } from "@/components/layout/StatsSection";
+
 import { QuoteSection } from "@/components/layout/QuoteSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,32 +22,6 @@ import {
 } from "lucide-react";
 
 const Productions = () => {
-  const productionStats = [
-    {
-      icon: <Camera className="h-8 w-8" />,
-      number: "4",
-      label: "Production Methods",
-      description: "Integrated approaches"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      number: "5",
-      label: "Core Pillars",
-      description: "Proven methodology"
-    },
-    {
-      icon: <BookOpen className="h-8 w-8" />,
-      number: "∞",
-      label: "Cultural Stories",
-      description: "From global folklore"
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      number: "100%",
-      label: "Child-Centered",
-      description: "Empowering narratives"
-    }
-  ];
 
   const approaches = [
     {
@@ -153,82 +127,82 @@ const Productions = () => {
         </div>
       </section>
 
-      {/* Production Stats */}
-      <StatsSection 
-        title="Innovation Meets Tradition"
-        subtitle="Our unique approach blends timeless storytelling with cutting-edge production techniques"
-        stats={productionStats}
-        backgroundClass="bg-background"
-      />
+
+      {/* Our Approach Hero */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-forest-deep via-forest-primary to-indigo-deep" id="our-approach">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent"></div>
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              Our Approach
+            </h2>
+            <div className="text-lg text-white/80 mb-8">
+              <p className="font-semibold text-xl md:text-2xl">
+                Every production follows our proven methodology that ensures cultural authenticity, environmental responsibility, and child-centered storytelling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Production Methods */}
-      <ContentBlock 
-        title="Our Production Methods"
-        variant="minimal"
-        className="bg-forest-light/10"
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-            <CardContent className="p-4 sm:p-6 lg:p-8">
-              <Camera className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
-              <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
-                Wildlife Cinematography
-              </h3>
-              <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                Capturing the raw wonder of the natural world
-              </p>
-            </CardContent>
-          </Card>
+      <section className="py-16 bg-forest-light/10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Camera className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
+                  Wildlife Cinematography
+                </h3>
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
+                  Capturing the raw wonder of the natural world
+                </p>
+              </CardContent>
+            </Card>
 
-          <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-            <CardContent className="p-4 sm:p-6 lg:p-8">
-              <Heart className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
-              <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
-                Puppetry & Practical Artistry
-              </h3>
-              <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                Timeless, tactile, beloved by children
-              </p>
-            </CardContent>
-          </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Heart className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
+                  Puppetry & Practical Artistry
+                </h3>
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
+                  Timeless, tactile, beloved by children
+                </p>
+              </CardContent>
+            </Card>
 
-          <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-            <CardContent className="p-4 sm:p-6 lg:p-8">
-              <Users className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
-              <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
-                Live Action & Human Performance
-              </h3>
-              <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                Authentic, emotional, deeply relatable
-              </p>
-            </CardContent>
-          </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Users className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
+                  Live Action & Human Performance
+                </h3>
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
+                  Authentic, emotional, deeply relatable
+                </p>
+              </CardContent>
+            </Card>
 
-          <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-            <CardContent className="p-4 sm:p-6 lg:p-8">
-              <Sparkles className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
-              <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
-                AI-enhanced Visuals & Innovation
-              </h3>
-              <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                Expanding creative possibilities
-              </p>
-            </CardContent>
-          </Card>
+            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Sparkles className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
+                  AI-enhanced Visuals & Innovation
+                </h3>
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
+                  Expanding creative possibilities
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </ContentBlock>
+      </section>
 
       {/* Five-Pillar Approach */}
-      <ContentBlock 
-        title="Our Five-Pillar Approach"
-        variant="outlined"
-        className="bg-forest-light/20"
-        id="our-approach"
-      >
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 text-center">
-          Every production follows our proven methodology that ensures cultural authenticity, 
-          environmental responsibility, and child-centered storytelling.
-        </p>
+      <section className="py-16 bg-forest-light/20">
+        <div className="container mx-auto px-4">
 
         <div className="space-y-12">
           {approaches.map((approach, index) => (
@@ -285,31 +259,39 @@ const Productions = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
-              <Link to="/partnerships">Explore Partnerships</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/get-involved">Get Involved</Link>
-            </Button>
+          <div className="text-center mt-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="default" size="lg" asChild>
+                <Link to="/partnerships">Explore Partnerships</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/get-involved">Get Involved</Link>
+              </Button>
+            </div>
           </div>
         </div>
-      </ContentBlock>
+      </section>
 
-      {/* Current Development Slate */}
-      <ContentBlock 
-        title="Current Development Slate"
-        variant="minimal"
-        className="bg-forest-deep text-white"
-        id="development-slate"
-      >
-        <p className="text-xl text-current/90 max-w-3xl mx-auto mb-8 text-center">
-          While specific titles remain confidential, our slate is built around core thematic 
-          strands that celebrate diversity, protect wildlife, and inspire young audiences.
-        </p>
+      {/* Current Development Slate Hero */}
+      <section className="relative min-h-screen flex items-center justify-center bg-forest-deep" id="development-slate">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent"></div>
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              Current Development Slate
+            </h2>
+            <div className="text-lg text-white/80 mb-8">
+              <p className="font-semibold text-xl md:text-2xl">
+                While specific titles remain confidential, our slate is built around core thematic strands that celebrate diversity, protect wildlife, and inspire young audiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+      <section className="py-16 bg-forest-deep text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
           {thematicStrands.map((strand, index) => (
             <Card key={index} className="bg-ivory/10 border-ivory/20 hover:bg-ivory/15 transition-all duration-300">
               <CardHeader>
@@ -363,7 +345,8 @@ const Productions = () => {
             </Button>
           </div>
         </div>
-      </ContentBlock>
+        </div>
+      </section>
 
       {/* Quote Section */}
       <QuoteSection 
