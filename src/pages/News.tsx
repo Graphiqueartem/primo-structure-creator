@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Calendar, 
   User, 
@@ -151,11 +150,6 @@ const News = () => {
             <h3 className="text-2xl font-semibold text-forest-deep mb-8 text-center">
               Stories in Motion
             </h3>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-            </div>
           </div>
         </div>
       </section>
@@ -176,8 +170,7 @@ const News = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-8">
             {featuredArticles.map((article, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-                <div className="aspect-video bg-muted">
-                  <ImagePlaceholder aspectRatio="video" />
+                <div className="aspect-video bg-gradient-to-br from-forest-light/20 to-primary/10 border border-forest-light/30 rounded-md">
                 </div>
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">

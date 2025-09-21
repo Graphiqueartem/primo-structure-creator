@@ -5,7 +5,6 @@ import { ContentBlock } from "@/components/layout/ContentBlock";
 import { QuoteSection } from "@/components/layout/QuoteSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { 
   Building, 
   Heart, 
@@ -225,45 +224,12 @@ const Partnerships = () => {
         variant="minimal"
         className="bg-forest-light/5"
       >
-        <div className="space-y-6 md:space-y-0">
-          {/* Mobile: Text breaks between media */}
-          <div className="block md:hidden space-y-4">
-            <VideoPlaceholder />
-            <div className="text-center px-4">
-              <p className="text-muted-foreground">Discover how our partnerships create meaningful impact across cultures and communities worldwide.</p>
-            </div>
-            <VideoPlaceholder />
-            <div className="text-center px-4">
-              <p className="text-muted-foreground">From government collaborations to grassroots initiatives, every partnership tells a unique story.</p>
-            </div>
-            <VideoPlaceholder />
-            <div className="text-center px-4">
-              <p className="text-muted-foreground">See the transformative power of cultural storytelling in action.</p>
-            </div>
-            <ImagePlaceholder />
-            <div className="text-center px-4">
-              <p className="text-muted-foreground">Behind-the-scenes glimpses of our collaborative creative process.</p>
-            </div>
-            <ImagePlaceholder />
-            <div className="text-center px-4">
-              <p className="text-muted-foreground">Cultural preservation efforts captured through our lens.</p>
-            </div>
-            <ImagePlaceholder />
-          </div>
-          
-          {/* Desktop: Grid layout */}
-          <div className="hidden md:block">
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-              <VideoPlaceholder />
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <ImagePlaceholder />
-              <ImagePlaceholder />
-              <ImagePlaceholder />
-            </div>
-          </div>
+        <div className="text-center space-y-6">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Discover how our partnerships create meaningful impact across cultures and communities worldwide. 
+            From government collaborations to grassroots initiatives, every partnership tells a unique story of 
+            transformation and cultural preservation.
+          </p>
         </div>
       </ContentBlock>
 

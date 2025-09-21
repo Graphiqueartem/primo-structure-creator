@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContentBlock } from "@/components/layout/ContentBlock";
 import { QuoteSection } from "@/components/layout/QuoteSection";
-import { VideoPlaceholder, ImagePlaceholder } from "@/components/ui/placeholders";
 import {
   Clapperboard,
   Heart,
@@ -112,9 +111,6 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex justify-center">
-            <VideoPlaceholder />
-          </div>
         </div>
       </ContentBlock>
 
@@ -173,10 +169,6 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            
-            <div className="flex justify-center">
-              <ImagePlaceholder />
-            </div>
           </div>
         </div>
       </ContentBlock>
@@ -318,9 +310,6 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex justify-center">
-            <ImagePlaceholder />
-          </div>
         </div>
       </ContentBlock>
 

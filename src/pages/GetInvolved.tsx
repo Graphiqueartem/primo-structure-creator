@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContentBlock } from "@/components/layout/ContentBlock";
 import { QuoteSection } from "@/components/layout/QuoteSection";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -213,13 +212,6 @@ const GetInvolved = () => {
               in the power of stories, there's a place for you in our global community.
             </p>
           </div>
-          <div className="space-y-4">
-            <ImagePlaceholder />
-            <div className="grid grid-cols-2 gap-4">
-              <VideoPlaceholder />
-              <ImagePlaceholder />
-            </div>
-          </div>
         </div>
       </ContentBlock>
 
@@ -235,14 +227,7 @@ const GetInvolved = () => {
         title="Join Our Global Network"
         variant="gradient"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
-            <VideoPlaceholder />
-            <div className="grid grid-cols-2 gap-4">
-              <ImagePlaceholder />
-              <VideoPlaceholder />
-            </div>
-          </div>
+        <div className="grid lg:grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-forest-deep/80 leading-relaxed">
               Become part of a worldwide network of creatives, educators, and conservationists working together 

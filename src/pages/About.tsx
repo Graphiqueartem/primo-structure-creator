@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContentBlock } from "@/components/layout/ContentBlock";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { Globe, Heart, TreePine, BookOpen, Camera, Palette, Users, GraduationCap } from "lucide-react";
 
 const About = () => {
@@ -70,11 +69,6 @@ const About = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <ImagePlaceholder />
-            <VideoPlaceholder />
-            <ImagePlaceholder />
-          </div>
           
           <div className="text-center">
             <Button variant="magical" size="lg" asChild>
@@ -114,12 +108,10 @@ const About = () => {
                   remain untold on the global stage.</strong>
                 </p>
               </div>
-              <VideoPlaceholder />
             </div>
             
             {/* Timeline Item 2 */}
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <ImagePlaceholder />
+            <div className="grid lg:grid-cols-1 gap-8 items-center">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
@@ -149,7 +141,6 @@ const About = () => {
                   reconnect children with wildlife, through films that are enchanting, educational, and globally inclusive.</strong>
                 </p>
               </div>
-              <VideoPlaceholder />
             </div>
           </div>
         </div>
@@ -263,9 +254,6 @@ const About = () => {
             </div>
           </div>
           
-          <div className="flex justify-center">
-            <ImagePlaceholder />
-          </div>
         </div>
       </ContentBlock>
     </div>

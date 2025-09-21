@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContentBlock } from "@/components/layout/ContentBlock";
-import { ImagePlaceholder, VideoPlaceholder } from "@/components/ui/placeholders";
 import { Heart, Globe, Users, Sparkles, BookOpen, TreePine, Lightbulb, Target, HandHeart } from "lucide-react";
 
 const Vision = () => {
@@ -90,10 +89,6 @@ const Vision = () => {
             </Card>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
-            <ImagePlaceholder />
-            <VideoPlaceholder />
-          </div>
           
           <div className="text-center">
             <Button variant="magical" size="lg" asChild>
@@ -242,9 +237,6 @@ const Vision = () => {
             </div>
           </div>
           
-          <div className="flex justify-center">
-            <ImagePlaceholder />
-          </div>
         </div>
       </ContentBlock>
     </div>
