@@ -22,7 +22,8 @@ import {
   TreePine,
   BookOpen,
   HandHeart,
-  Trophy
+  Trophy,
+  Target
 } from "lucide-react";
 
 const Index = () => {
@@ -319,6 +320,100 @@ const Index = () => {
           
           <div className="flex justify-center">
             <ImagePlaceholder />
+          </div>
+        </div>
+      </ContentBlock>
+
+      {/* Home Sub-Sections – Four Blocks */}
+      <ContentBlock 
+        title=""
+        variant="minimal"
+        className="bg-background"
+      >
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="border-forest-light/30 hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <BookOpen className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-forest-deep mb-4">Our Mission</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                <strong>Creating films that celebrate folklore, protect wildlife, and inspire children everywhere 
+                to imagine a more inclusive, compassionate, and sustainable world.</strong>
+              </p>
+              <Button variant="warm" size="sm" asChild>
+                <Link to="/vision">Read Our Mission</Link>
+              </Button>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-forest-light/30 hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <Target className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-forest-deep mb-4">Our Impact</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                <strong>Measurable change across conservation, cultural preservation, education, 
+                and economic development through the power of storytelling.</strong>
+              </p>
+              <Button variant="magical" size="sm" asChild>
+                <Link to="/impact">Explore Our Impact</Link>
+              </Button>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-forest-light/30 hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-forest-deep mb-4">Our Approach</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                <strong>Blending traditional puppetry, live action, wildlife cinematography, 
+                and AI-enhanced visuals to create authentic, magical stories.</strong>
+              </p>
+              <Button variant="hero" size="sm" asChild>
+                <Link to="/productions">Discover Our Approach</Link>
+              </Button>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-forest-light/30 hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-forest-deep mb-4">Digital Archives</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                <strong>Preserving folklore and cultural stories from around the world 
+                in our growing digital collection of heritage tales.</strong>
+              </p>
+              <Button variant="warm" size="sm" asChild>
+                <Link to="/about">Explore the Archive</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </ContentBlock>
+
+      {/* Call to Join */}
+      <ContentBlock 
+        title=""
+        variant="minimal"
+        className="bg-gradient-warm/30"
+      >
+        <div className="text-center space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-forest-deep">
+            Join the Movement
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <strong>Whether you're a government, NGO, cultural organization, educator, or individual who 
+            believes in the power of stories to create change — there's a place for you in our global community.</strong>
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="magical" size="lg" asChild>
+              <Link to="/partnerships">Partner</Link>
+            </Button>
+            <Button variant="warm" size="lg" asChild>
+              <Link to="/get-involved">Support</Link>
+            </Button>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/get-involved">Get Involved</Link>
+            </Button>
           </div>
         </div>
       </ContentBlock>
